@@ -11,18 +11,63 @@
 					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного «Глейси»">
 				</a>
 				<ul class="site-navigation">
-					<li><a href="catalog.html">Каталог</a></li>
-					<li><a href="delivery.html">Доставка и оплата</a></li>
-					<li><a href="about.html">О Компании</a></li>
+					<li>
+						<a href="catalog.html">Каталог</a>
+						<ul class="site-navigation-submenu">
+							<li>
+								<a href="#">Новинки</a>
+							</li>
+							<li>
+								<a href="catalog.html">Сливочное</a>
+							</li>
+							<li>
+								<a href="#">Щербеты</a>
+							</li>
+							<li>
+								<a href="#">Фруктовый лед</a>
+							</li>
+							<li>
+								<a href="#">Мелорин</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">О Компании</a></li>
 				</ul>
 				<div class="search">
-					<button></button>
+					<button type="button">Открыть поиск по сайту</button>
+					<div class="modal modal-search">
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<label>
+								Что ищем?
+								<input type="search" name="site-search" placeholder="Что ищем?">
+							</label>
+							<button class="visually-hidden" type="submit">Найти</button>
+						</form>
+						<button class="visually-hidden" type="button">Закрыть поиск</button>
+					</div>
 				</div>
 				<div class="user-navigation">
-					<button>Вход</button>
+					<button type="button">Вход</button>
+					<section class="modal modal-login">
+						<h2 class="visually-hidden">Личный кабинет</h2>
+						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+							<p>
+								<label class="visually-hidden" for="login-email">Электронная почта</label>
+								<input type="email" name="login-email" id="login-email" placeholder="Электронная почта">
+							</p>
+							<p>
+								<label class="visually-hidden" for="login-password">Пароль</label>
+								<input type="password" name="login-password" id="login-password" placeholder="Пароль">
+							</p>
+							<button type="submit">Войти</button>
+						</form>
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+					</section>
 				</div>
 				<div class="cart">
-					<button>Пусто</button>
+					<button type="button" aria-label="Товары в корзине">Пусто</button>
 				</div>
 			</nav>
 			<section class="working-hours">
@@ -152,30 +197,52 @@
 			</article>
 			<section class="mail-distribution">
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-				<!-- Здесь будет форма подписки на рассылку-->
+				<form class="mail-distribution-form" action="https://echo.htmlacademy.ru" method="post">
+					<label class="visually-hidden" for="subscribe-email">Ваша почта</label>
+					<input type="email" name="subscribed-email" id="subscribe-email" placeholder="Электронная почта">
+					<button type="submit">Отправить</button>
+				</form>
 			</section>
 			<section class="store-contacts">
 				<h2 class="visually-hidden">Как до нас добраться.</h2>
 				<div class="map">
-					<img src="img/map.jpg" width="1200" height="430" alt="Расположение офлайн-магазина на карте">
+					<img src="img/map.jpg" width="1200" height="430" alt="Большая Конюшенная 19/8 на карте Санкт-Петербурга">
 				</div>
-				<div class="adress">
+				<address>
 					<h3>Адрес главного офиса и офлайн-магазина:</h3>
 					<p>ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
 					<p>
 						Для заказов по телефону:<br><span>8 812 450-25-25</span><br>(с 10 до 20 ежедневно)
 					</p> 
-				</div>
+				</address>
 				<button>Форма обратной связи</button>
+			</section>
+			<section class="modal modal-feedback">
+				<h2>Мы обязательно вам ответим!</h2>
+				<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+					<p>
+						<label class="visually-hidden" for="modal-feedback-name">Ваше имя</label>
+						<input type="text" name="feedback-name" id="modal-feedback-name" placeholder="Как вас зовут?">
+					</p>
+					<p>
+						<label class="visually-hidden" for="modal-feedback-email">Ваша почта</label>
+						<input type="email" name="feedback-email" id="modal-feedback-email" placeholder="Ваша почта для ответа?">
+					</p>
+					<p>
+						<textarea name="feedback-text" id="modal-feedback-text" rows="5">Напишите что-нибудь...</textarea>
+					</p>
+					<button type="submit">Отправить</button>
+				</form>
+				<button class="modal-close" type="button">Закрыть</button>
 			</section>
 		</main>
 		<footer class="main-footer">
 			<div class="footer-social">
         		<ul>
-        			<li><a class="social-button" href="#">Твиттер</a></li>
-        			<li><a class="social-button" href="#">Инстаграм</a></li>
-        			<li><a class="social-button" href="#">Фейсбук</a></li>
-        			<li><a class="social-button" href="#">Вконтакте</a></li>
+        			<li><a class="social-button" href="#">«Глейси» в Твиттере</a></li>
+        			<li><a class="social-button" href="#">«Глейси» в Инстаграме</a></li>
+        			<li><a class="social-button" href="#">«Глейси» в Фейсбуке</a></li>
+        			<li><a class="social-button" href="#">«Глейси» Вконтакте</a></li>
 				</ul>
       		</div>
       		<section class="documentation">

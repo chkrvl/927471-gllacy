@@ -11,18 +11,132 @@
 					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного «Глейси»">
 				</a>
 				<ul class="site-navigation">
-					<li class="site-navigation-current"><a href="catalog.html">Каталог</a></li>
-					<li><a href="delivery.html">Доставка и оплата</a></li>
-					<li><a href="about.html">О Компании</a></li>
+					<li class="site-navigation-current">
+						<a href="catalog.html">Каталог</a>
+						<ul class="site-navigation-submenu">
+							<li>
+								<a href="#">Новинки</a>
+							</li>
+							<li>
+								<a href="catalog.html">Сливочное</a>
+							</li>
+							<li>
+								<a href="#">Щербеты</a>
+							</li>
+							<li>
+								<a href="#">Фруктовый лед</a>
+							</li>
+							<li>
+								<a href="#">Мелорин</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">О Компании</a></li>
 				</ul>
 				<div class="search">
-					<button></button>
+					<button type="button">Открыть поиск по сайту</button>
+					<div class="modal modal-search">
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<label>
+								Что ищем?
+								<input type="search" name="site-search" placeholder="Что ищем?">
+							</label>
+							<button class="visually-hidden" type="submit">Найти</button>
+						</form>
+						<button class="visually-hidden" type="button">Закрыть поиск</button>
+					</div>
 				</div>
 				<div class="user-navigation">
-					<button>Вход</button>
+					<button type="button">Вход</button>
+					<section class="modal modal-login">
+						<h2 class="visually-hidden">Личный кабинет</h2>
+						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+							<p>
+								<label class="visually-hidden" for="login-email">Электронная почта</label>
+								<input type="email" name="login-email" id="login-email" placeholder="Электронная почта">
+							</p>
+							<p>
+								<label class="visually-hidden" for="login-password">Пароль</label>
+								<input type="password" name="login-password" id="login-password" placeholder="Пароль">
+							</p>
+							<button type="submit">Войти</button>
+						</form>
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+					</section>					
 				</div>
 				<div class="cart">
-					<button>2 товара</button>
+					<button class="button" aria-label="Товары в корзине">2 товара</button>
+					<section class="modal modal-order-list">
+						<h2 class="visually-hidden">Товары в корзине</h2>
+						<form class="order-list-form" action="https://echo.htmlacademy.ru" method="post">
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<button type="button">Удалить следующий товар из корзины</button>
+										</td>
+										<td>
+											<img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+										</td>
+										<td>
+											<label>
+												Пломбир с апельсиновым джемом
+												<input type="hidden" name="order-item-name-1" value="Пломбир с апельсиновым джемом">
+											</label>
+										</td>
+										<td>
+											<span>1,5 кг</span> x
+											<span>200 руб.</span>
+											<input type="hidden" name="order-item-weight-1" value="1,5">
+											<input type="hidden" name="order-item-price-1" value="200">
+										</td>
+										<td>
+											<span>300 руб.</span>
+											<input type="hidden" name="order-item-cost-1" value="300">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<button type="button">Удалить следующий товар из корзины</button>
+										</td>
+										<td>
+											<img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+										</td>
+										<td>
+											<label>
+												Клубничный пломбир с присыпкой из белого шоколада
+												<input type="hidden" name="order-item-name-2" value="Клубничный пломбир с присыпкой из белого шоколада">
+											</label>
+										</td>
+										<td>
+											<span>1,5 кг</span> x
+											<span>300 руб.</span>
+											<input type="hidden" name="order-item-weight-2" value="1,5">
+											<input type="hidden" name="order-item-price-2" value="300">
+										</td>
+										<td>
+											<span>400 руб.</span>
+											<input type="hidden" name="order-item-cost-2" value="400">
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="4">
+											Итого:
+										</td>
+										<td>
+											750 руб.
+											<input type="hidden" name="summary-order-cost" value="750">
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+							<button type="submit">Оформить заказ</button>
+						</form>
+					</section>
 				</div>
 			</nav>
 			<section class="working-hours">
@@ -259,10 +373,10 @@
 		<footer class="main-footer">
 			<div class="footer-social">
         		<ul>
-        			<li><a class="social-button" href="#">Твиттер</a></li>
-        			<li><a class="social-button" href="#">Инстаграм</a></li>
-        			<li><a class="social-button" href="#">Фейсбук</a></li>
-        			<li><a class="social-button" href="#">Вконтакте</a></li>
+        			<li><a class="social-button" href="#">«Глейси» в Твиттере</a></li>
+        			<li><a class="social-button" href="#">«Глейси» в Инстаграме</a></li>
+        			<li><a class="social-button" href="#">«Глейси» в Фейсбуке</a></li>
+        			<li><a class="social-button" href="#">«Глейси» Вконтакте</a></li>
 				</ul>
       		</div>
       		<section class="documentation">
