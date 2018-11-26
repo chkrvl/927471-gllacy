@@ -39,7 +39,7 @@
 					<div class="modal modal-search">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<label>
-								Что ищем?
+								Поисковая строка
 								<input type="search" name="site-search" placeholder="Что ищем?">
 							</label>
 							<button class="visually-hidden" type="submit">Найти</button>
@@ -48,7 +48,7 @@
 					</div>
 				</div>
 				<div class="user-navigation">
-					<button type="button">Вход</button>
+					<button type="button" aria-label="Вход в личный кабинет">Вход</button>
 					<section class="modal modal-login">
 						<h2 class="visually-hidden">Личный кабинет</h2>
 						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -71,6 +71,7 @@
 				</div>
 			</nav>
 			<section class="working-hours">
+				<h3 class="visually-hidden">Нам можно позвонить</h3>
 				<p>С 10 до 20, ежедневно</p>
 				<p>8 812 450-25-25</p>
 			</section>
@@ -104,70 +105,62 @@
 				<h2 class="visually-hidden">Самые продаваемые виды мороженного.</h2>
 				<ul class="catalog-list">
 					<li class="catalog-item">
-						<h3>
-							<a href="catalog-item.html">
+						<a href="catalog-item.html">
+							<h3>
                 				<span class="catalog-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
-              				</a>
-              			</h3>
-              			<p class="catalog-item-image">
-              				 <a href="catalog-item.html">
+              				</h3>
+              				<p class="catalog-item-image">
               				 	<img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              				 </a>
-              			</p>
+              				</p>
+              			</a>
 						<p class="catalog-item-price">
 							<span class="catalog-item-price-value">310</span>
-							<span class="catalog-item-price-measure">₽/кг</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
 						<button>Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
-						<h3>
-							<a href="catalog-item.html">
+						<a href="catalog-item.html">
+							<h3>
 								<span class="catalog-item-title">Сливочно-кофейное с кусочками шоколада</span>
-							</a>
-						</h3>
-						<p class="catalog-item-image">
-							<a href="catalog-item.html">
+							</h3>
+							<p class="catalog-item-image">
 								<img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-							</a>
-						</p>
+							</p>
+						</a>
 						<p class="catalog-item-price">
 							<span class="catalog-item-price-value">380</span>
-							<span class="catalog-item-price-measure">₽/кг</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
 						<button>Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
-						<h3>
-							<a href="catalog-item.html">
+						<a href="catalog-item.html">
+							<h3>
 								<span class="catalog-item-title">Сливочно-клубничное с присыпкой из белого шоколада</span>
-							</a>
-						</h3>
-						<p class="catalog-item-image">
-							<a href="catalog-item.html">
+							</h3>
+							<p class="catalog-item-image">
 								<img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-							</a>
-						</p>
+							</p>
+						</a>
 						<p class="catalog-item-price">
 							<span class="catalog-item-price-value">355</span>
-							<span class="catalog-item-price-measure">₽/кг</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
 						<button>Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
-						<h3>
-							<a href="catalog-item.html">
+						<a href="catalog-item.html">
+							<h3>
 								<span class="catalog-item-title">Сливочное крем-брюле с карамельной подливкой</span>
-							</a>
-						</h3>
-						<p class="catalog-item-image">
-							<a href="catalog-item.html">
+							</h3>
+							<p class="catalog-item-image">
 								<img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-							</a>
-						</p>
+							</p>
+						</a>
 						<p class="catalog-item-price">
 							<span class="catalog-item-price-value">415</span>
-							<span class="catalog-item-price-measure">₽/кг</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
 						<button>Быстрый просмотр</button>
 					</li>
@@ -197,6 +190,7 @@
 				</a>
 			</article>
 			<section class="mail-distribution">
+				<h2 class="visually-hidden">Рассылка по электронной почте</h2>
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 				<form class="mail-distribution-form" action="https://echo.htmlacademy.ru" method="post">
 					<label class="visually-hidden" for="subscribe-email">Ваша почта</label>
