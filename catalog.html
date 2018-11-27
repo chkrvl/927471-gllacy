@@ -3,40 +3,43 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Магазин мороженного «Глейси»: Каталог</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
+		<div class="wrapper">
 		<header class="main-header">
 			<nav class="main-navigation">
 				<a class="main-header-logo" href="index.html">
 					<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного «Глейси»">
 				</a>
 				<ul class="site-navigation">
-					<li class="site-navigation-current">
+					<li class="navigation-item navigation-item-current">
 						<a href="catalog.html">Каталог</a>
-						<ul class="site-navigation-submenu">
-							<li>
+						<ul class="dropdown site-navigation-submenu">
+							<li class="navigation-submenu-item">
 								<a href="#">Новинки</a>
 							</li>
-							<li class="site-navigation-submenu-current">
+							<li class="navigation-submenu-item navigation-submenu-item-current">
 								<a href="catalog.html">Сливочное</a>
 							</li>
-							<li>
+							<li class="navigation-submenu-item">
 								<a href="#">Щербеты</a>
 							</li>
-							<li>
+							<li class="navigation-submenu-item">
 								<a href="#">Фруктовый лед</a>
 							</li>
-							<li>
+							<li class="navigation-submenu-item">
 								<a href="#">Мелорин</a>
 							</li>
 						</ul>
 					</li>
-					<li><a href="#">Доставка и оплата</a></li>
-					<li><a href="#">О Компании</a></li>
+					<li class="navigation-item"><a href="#">Доставка и оплата</a></li>
+					<li class="navigation-item"><a href="#">О Компании</a></li>
 				</ul>
 				<div class="search">
 					<button type="button">Открыть поиск по сайту</button>
-					<div class="modal modal-search">
+					<div class="dropdown search">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<label>
 								Поисковая строка
@@ -44,12 +47,11 @@
 							</label>
 							<button class="visually-hidden" type="submit">Найти</button>
 						</form>
-						<button class="visually-hidden" type="button">Закрыть поиск</button>
 					</div>
 				</div>
 				<div class="user-navigation">
 					<button type="button" aria-label="Вход в личный кабинет">Вход</button>
-					<section class="modal modal-login">
+					<section class="dropdown customer-login">
 						<h2 class="visually-hidden">Личный кабинет</h2>
 						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
 							<p>
@@ -436,6 +438,7 @@
       		<p class="footer-copyright">
       			Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
       		</p>
-		</footer>		
+		</footer>
+		</div>	
 	</body>
 </html>

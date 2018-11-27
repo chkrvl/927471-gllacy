@@ -1,0 +1,219 @@
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Roboto"), local("Roboto-Regular"),
+       url("/fonts/web/roboto.woff2") format("woff2"), 
+       url("/fonts/web/roboto.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+       url("/fonts/web/robotomedium.woff2") format("woff2"), 
+       url("/fonts/web/robotomedium.woff") format("woff"),
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Roboto Bold"),
+		local("Roboto-Bold"),
+		url("/fonts/web/robotobold.woff2") format("woff2"),
+		url("/fonts/web/robotobold.woff") format("woff"),
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 500;
+	color: #ffffff;
+	
+
+	background-color: #849d8f;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.wrapper ul {
+	list-style-type: none;
+}
+
+.main-header-logo {
+	border: none;
+}
+
+.site-navigation {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #ffffff;
+
+	background-color: #849d8f;
+}
+
+.navigation-item > a {
+	color: #ffffff;
+}
+
+.navigation-item > a:hover {
+	padding: 10px 14px;
+
+	color: #333333;
+
+	border: none;
+	background-color: #f7f6f3;
+	border-radius: 25px;
+}
+
+.navigation-item > a:active {
+	padding: 10px 14px;
+
+	color: #323232;
+
+	border: none;
+	background-color: #ededed;
+	box-shadow: inset 0px 2px 1px 0 #696969;
+	border-radius: 25px;
+}
+
+/*Попапы и всплывающие элементы сейчас стилизовать не нужно. Скройте их с помощью display: none. Мы вернёмся к ним в седьмом разделе.*/
+.modal {
+	display: none;
+}
+
+.dropdown {
+	display: none;
+}
+
+.site-navigation-submenu {
+	/*Нужно переделывать*/
+	width: 143px;
+	height: 171px;
+	padding: 0;
+
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+
+	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+	background-color: #f8f7f4;
+	border-radius: 5px;
+}
+
+.working-hours {
+	text-align: right;
+}
+
+.working-hours p {
+	margin: 8px 0 0 0;
+	font-size: 14px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.working-hours p:last-child {
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.half-width {
+	width: 560px;
+
+	border-radius: 15px;
+}
+
+.marketing-campaign-list {
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.marketing-campaign-preview {
+	height: 229px;
+}
+
+.marketing-campaign-list li:first-child {
+	background-color: #73172b;
+	background-image: url("../img/raspberry-bg.jpg");
+}
+
+.marketing-campaign-list li:last-child {
+	background-color: #3a2217;
+	background-image: url("../img/chocolate-bg.jpg");
+}
+
+.marketing-campaign-preview a {
+	color: #ffffff;
+	border: none;
+}
+
+.marketing-campaign-preview h2 {
+	font-size: 35px;
+}
+
+.catalog-item-image::after {
+	content: "";
+	background-color: white; 
+	background-image: url("../img/hit.svg");
+	background-repeat: no-repeat;
+	background-size: 61px 61px;
+}
+
+.features {
+	width: 1146px;
+	height: 306px;
+
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	color: #323232;
+
+	background-image: url("../img/waffles-bg.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	border-radius: 15px;
+}
+
+.features h1 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30px;
+	color: #323232;
+}
+
+.features-list {
+	list-style: none;
+}
+
+.blog-preview {
+	height: 220px;
+
+	background-image: url("../img/blog-preview-bg.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	
+}
+
+.mail-distribution {
+	height: 220px;
+
+	font-size: 16px;
+	color: #5a5a5a;
+
+	background-image: url("../img/mail-bg.svg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
