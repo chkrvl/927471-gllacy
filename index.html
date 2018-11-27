@@ -38,8 +38,8 @@
 					<li class="navigation-item"><a href="#">О Компании</a></li>
 				</ul>
 				<div class="search">
-					<button type="button">Открыть поиск по сайту</button>
-					<div class="dropdown search">
+					<button class="nav-button" type="button">Открыть поиск по сайту</button>
+					<div class="dropdown site-search">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<label>
 								Поисковая строка
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 				<div class="user-navigation">
-					<button type="button" aria-label="Вход в личный кабинет">Вход</button>
+					<button class="nav-button" type="button" aria-label="Вход в личный кабинет">Вход</button>
 					<section class="dropdown customer-login">
 						<h2 class="visually-hidden">Личный кабинет</h2>
 						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -62,14 +62,14 @@
 								<label class="visually-hidden" for="login-password">Пароль</label>
 								<input type="password" name="login-password" id="login-password" placeholder="Пароль">
 							</p>
-							<button type="submit">Войти</button>
+							<button class="button" type="submit">Войти</button>
 						</form>
 						<a href="#">Забыли пароль?</a>
 						<a href="#">Новая регистрация</a>
 					</section>
 				</div>
 				<div class="cart">
-					<button type="button" aria-label="Товары в корзине">Пусто</button>
+					<button class="nav-button" type="button" aria-label="Товары в корзине">Пусто</button>
 				</div>
 			</nav>
 			<section class="working-hours">
@@ -104,7 +104,7 @@
 				</ul>
 			</section>
 			<section class="best-selling">
-				<h2 class="visually-hidden">Самые продаваемые виды мороженного.</h2>
+				<h2 class="visually-hidden">Самые продаваемые виды мороженного</h2>
 				<ul class="catalog-list">
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -116,10 +116,10 @@
               				</p>
               			</a>
 						<p class="catalog-item-price">
-							<span class="catalog-item-price-value">310</span>
-							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
+							<span class="catalog-item-price-value">310 ₽</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -131,10 +131,10 @@
 							</p>
 						</a>
 						<p class="catalog-item-price">
-							<span class="catalog-item-price-value">380</span>
-							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
+							<span class="catalog-item-price-value">380 ₽</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -146,10 +146,10 @@
 							</p>
 						</a>
 						<p class="catalog-item-price">
-							<span class="catalog-item-price-value">355</span>
-							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
+							<span class="catalog-item-price-value">355 ₽</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -161,10 +161,10 @@
 							</p>
 						</a>
 						<p class="catalog-item-price">
-							<span class="catalog-item-price-value">415</span>
-							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
+							<span class="catalog-item-price-value">415 ₽</span>
+							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 				</ul>			
 			</section>
@@ -192,19 +192,22 @@
 				</a>
 			</article>
 			<section class="half-width mail-distribution">
+				<div class="subscribe-wrapper">
 				<h2 class="visually-hidden">Рассылка по электронной почте</h2>
 				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 				<form class="mail-distribution-form" action="https://echo.htmlacademy.ru" method="post">
 					<label class="visually-hidden" for="subscribe-email">Ваша почта</label>
 					<input type="email" name="subscribed-email" id="subscribe-email" placeholder="Электронная почта">
-					<button type="submit">Отправить</button>
+					<button class="button" type="submit">Отправить</button>
 				</form>
+				</div>
 			</section>
 			<section class="store-contacts">
-				<h2 class="visually-hidden">Как до нас добраться.</h2>
+				<h2 class="visually-hidden">Как до нас добраться</h2>
 				<div class="map">
 					<img src="img/map.jpg" width="1200" height="430" alt="Большая Конюшенная 19/8 на карте Санкт-Петербурга">
 				</div>
+				<div class="contacts-wrapper">
 				<address>
 					<p>Адрес главного офиса и офлайн-магазина:</p>
 					<p>ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</p>
@@ -212,7 +215,8 @@
 						Для заказов по телефону:<br><span>8 812 450-25-25</span><br>(с 10 до 20 ежедневно)
 					</p> 
 				</address>
-				<button>Форма обратной связи</button>
+				<button class="button">Форма обратной связи</button>
+				</div>
 			</section>
 			<section class="modal modal-feedback">
 				<h2>Мы обязательно вам ответим!</h2>
@@ -228,7 +232,7 @@
 					<p>
 						<textarea name="feedback-text" id="modal-feedback-text" rows="5">Напишите что-нибудь...</textarea>
 					</p>
-					<button type="submit">Отправить</button>
+					<button class="button" type="submit">Отправить</button>
 				</form>
 				<button class="modal-close" type="button">Закрыть</button>
 			</section>
@@ -236,10 +240,10 @@
 		<footer class="main-footer">
 			<div class="footer-social">
         		<ul>
-        			<li><a class="social-button" href="#">«Глейси» в Твиттере</a></li>
-        			<li><a class="social-button" href="#">«Глейси» в Инстаграме</a></li>
-        			<li><a class="social-button" href="#">«Глейси» в Фейсбуке</a></li>
-        			<li><a class="social-button" href="#">«Глейси» Вконтакте</a></li>
+        			<li><a class="social-button social-tw" href="#">«Глейси» в Твиттере</a></li>
+        			<li><a class="social-button social-ig" href="#">«Глейси» в Инстаграме</a></li>
+        			<li><a class="social-button social-fb" href="#">«Глейси» в Фейсбуке</a></li>
+        			<li><a class="social-button social-vk" href="#">«Глейси» Вконтакте</a></li>
 				</ul>
       		</div>
       		<section class="documentation">
@@ -252,7 +256,7 @@
       			</ul>
       		</section>
       		<p class="footer-copyright">
-      			Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+      			Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2018
       		</p>
 		</footer>
 		</div>

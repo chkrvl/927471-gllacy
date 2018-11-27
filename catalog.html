@@ -38,8 +38,8 @@
 					<li class="navigation-item"><a href="#">О Компании</a></li>
 				</ul>
 				<div class="search">
-					<button type="button">Открыть поиск по сайту</button>
-					<div class="dropdown search">
+					<button class="nav-button" type="button">Открыть поиск по сайту</button>
+					<div class="dropdown site-search">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<label>
 								Поисковая строка
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 				<div class="user-navigation">
-					<button type="button" aria-label="Вход в личный кабинет">Вход</button>
+					<button class="nav-button" type="button" aria-label="Вход в личный кабинет">Вход</button>
 					<section class="dropdown customer-login">
 						<h2 class="visually-hidden">Личный кабинет</h2>
 						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -62,22 +62,22 @@
 								<label class="visually-hidden" for="login-password">Пароль</label>
 								<input type="password" name="login-password" id="login-password" placeholder="Пароль">
 							</p>
-							<button type="submit">Войти</button>
+							<button class="button" type="submit">Войти</button>
 						</form>
 						<a href="#">Забыли пароль?</a>
 						<a href="#">Новая регистрация</a>
 					</section>					
 				</div>
 				<div class="cart">
-					<button class="button" aria-label="Товары в корзине">2 товара</button>
-					<section class="modal modal-order-list">
+					<button class="nav-button" aria-label="Товары в корзине">2 товара</button>
+					<section class="dropdown order-list">
 						<h2 class="visually-hidden">Товары в корзине</h2>
 						<form class="order-list-form" action="https://echo.htmlacademy.ru" method="post">
 							<table>
 								<tbody>
 									<tr>
 										<td>
-											<button type="button">Удалить товар в этой строке из корзины</button>
+											<button class="revoke-order" type="button">Удалить товар в этой строке из корзины</button>
 										</td>
 										<td>
 											<img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
@@ -88,7 +88,7 @@
 												<input type="hidden" name="order-item-name-1" value="Пломбир с апельсиновым джемом">
 											</label>
 										</td>
-										<td>
+										<td class="weight-n-price">
 											<span>1,5 кг</span> x
 											<span>200 руб.</span>
 											<input type="hidden" name="order-item-weight-1" value="1,5">
@@ -101,7 +101,7 @@
 									</tr>
 									<tr>
 										<td>
-											<button type="button">Удалить товар в этой строке из корзины</button>
+											<button class="revoke-order" type="button">Удалить товар в этой строке из корзины</button>
 										</td>
 										<td>
 											<img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
@@ -112,7 +112,7 @@
 												<input type="hidden" name="order-item-name-2" value="Клубничный пломбир с присыпкой из белого шоколада">
 											</label>
 										</td>
-										<td>
+										<td class="weight-n-price">
 											<span>1,5 кг</span> x
 											<span>300 руб.</span>
 											<input type="hidden" name="order-item-weight-2" value="1,5">
@@ -125,7 +125,7 @@
 									</tr>
 								</tbody>
 								<tfoot>
-									<tr>
+									<tr class="order-total-cost">
 										<td colspan="4">
 											Итого:
 										</td>
@@ -136,7 +136,7 @@
 									</tr>
 								</tfoot>
 							</table>
-							<button type="submit">Оформить заказ</button>
+							<button class="button" type="submit">Оформить заказ</button>
 						</form>
 					</section>
 				</div>
@@ -162,7 +162,7 @@
 							<h3>
 								<label for="sort-type">Сортировка:</label>
 							</h3>
-							<select name="sort-type" id="sort-type">
+							<select class="filter-item" name="sort-type" id="sort-type">
 								<option>по популярности</option>
 								<option>сначала недорогие</option>
 								<option>сначала дорогие</option>
@@ -175,10 +175,11 @@
 							</h3>
 							<span>100 руб. – 500 руб.</span>
 							<!-- Пока непонятно, как сделать фильтр с двумя бегунками для отображения диапазона цен-->
-							<input type="range" name="price-range" id="price-range" min="100" max="500" step="10">
+							<input class="filter-item" type="range" name="price-range" id="price-range" min="100" max="500" step="10">
 						</li>
 						<li>
 							<h3>Жирность:</h3>
+							<div class="filter-item">
 							<label>
 								<input type="radio" name="fat-content" value="0">
 								0%
@@ -195,9 +196,11 @@
 								<input type="radio" name="fat-content" value="30+">
 								выше 30%
 							</label>
+							</div>
 						</li>
 						<li>
 							<h3>Наполнители:</h3>
+								<div class="filter-item">
 								<label>
 									<input type="checkbox" name="choco" checked="">
 									шоколадные
@@ -218,6 +221,7 @@
 									<input type="checkbox" name="jam">
 									джемы
 								</label>
+								</div>
 						</li>
 					</ul>
 					<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>
@@ -239,7 +243,7 @@
 							<span class="catalog-item-price-value">310</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -254,7 +258,7 @@
 							<span class="catalog-item-price-value">380</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -269,7 +273,7 @@
 							<span class="catalog-item-price-value">355</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -284,7 +288,7 @@
 							<span class="catalog-item-price-value">415</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -299,7 +303,7 @@
 							<span class="catalog-item-price-value">325</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -314,7 +318,7 @@
 							<span class="catalog-item-price-value">410</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -329,7 +333,7 @@
 							<span class="catalog-item-price-value">375</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -344,7 +348,7 @@
 							<span class="catalog-item-price-value">320</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -359,7 +363,7 @@
 							<span class="catalog-item-price-value">440</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -374,7 +378,7 @@
 							<span class="catalog-item-price-value">435</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -389,7 +393,7 @@
 							<span class="catalog-item-price-value">355</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 					<li class="catalog-item">
 						<a href="catalog-item.html">
@@ -404,7 +408,7 @@
 							<span class="catalog-item-price-value">420</span>
 							<span class="catalog-item-price-measure" aria-label="рублей за килограмм">₽/кг</span>
 						</p>
-						<button>Быстрый просмотр</button>
+						<button class="button">Быстрый просмотр</button>
 					</li>
 				</ul>
 			</section>
@@ -420,10 +424,10 @@
 		<footer class="main-footer">
 			<div class="footer-social">
         		<ul>
-        			<li><a class="social-button" href="#">«Глейси» в Твиттере</a></li>
-        			<li><a class="social-button" href="#">«Глейси» в Инстаграме</a></li>
-        			<li><a class="social-button" href="#">«Глейси» в Фейсбуке</a></li>
-        			<li><a class="social-button" href="#">«Глейси» Вконтакте</a></li>
+        			<li><a class="social-button social-tw" href="#">«Глейси» в Твиттере</a></li>
+        			<li><a class="social-button social-ig" href="#">«Глейси» в Инстаграме</a></li>
+        			<li><a class="social-button social-fb" href="#">«Глейси» в Фейсбуке</a></li>
+        			<li><a class="social-button social-vk" href="#">«Глейси» Вконтакте</a></li>
 				</ul>
       		</div>
       		<section class="documentation">
