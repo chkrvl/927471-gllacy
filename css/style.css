@@ -400,26 +400,26 @@ a {
 	background-size: 61px 61px;
 }
 
-/* Попытаться сделать ховер при наведении на товар
+.catalog-item {
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
 .catalog-item:hover {
-	width: 293px;
-	height: 405px;
-	opacity: 0.2;
-	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-	background-color: #f8f7f4;
-}*/
+	background-color: rgba(255, 255, 255, 0.2);
+}
 
-/*. Попытаться закруглить изображения товара в цвет фона страницы
+/* Попытаться закруглить изображения товара в цвет фона страницы*/
 
-catalog-item-image {
+.catalog-item-image {
 	width: 267px;
 
-	background-color: inherit;
+	background-color: #849d8f;
 	border-style: solid;
 	border-color: black;
-	border-radius: 140px;
-}*/
+	border-radius: 50%;
+}
 
 .catalog-item-title {
 	font-size: 16px;
@@ -452,9 +452,9 @@ catalog-item-image {
 	width: 1146px;
 	height: 306px;
 
-	font-size: 16px;
+	/*font-size: 16px;*/
 	font-weight: 400;
-	line-height: 22px;
+	/*line-height: 22px;*/
 	color: #323232;
 
 	background-image: url("../img/waffles-bg.jpg");
@@ -471,10 +471,10 @@ catalog-item-image {
 }
 
 .features-list {
-	list-style: none;
-	column-count: 2;
+	/*list-style: none;*/
+	column-width: 470px;
+	/*column-count: 2;*/
 }
-
 
 .features-item:first-of-type::before {
 	content: "";
