@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<div class="wrapper"> <!-- Для смены фона при изменении положения слайдера и обнуления стилей списков -->
+		<div class="wrapper">
 		<header class="main-header">
 			<nav class="main-navigation">
 				<a class="main-header-logo">
@@ -37,8 +37,9 @@
 					<li class="navigation-item"><a href="#">Доставка и оплата</a></li>
 					<li class="navigation-item"><a href="#">О Компании</a></li>
 				</ul>
+				<div class="user-navigation">
 				<div class="search">
-					<button class="nav-button" type="button">Открыть поиск по сайту</button>
+					<button class="nav-button" type="button" aria-label="Открыть поиск по сайту"></button>
 					<div class="dropdown site-search">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<label>
@@ -49,7 +50,7 @@
 						</form>
 					</div>
 				</div>
-				<div class="user-navigation">
+				<div class="cabinet">
 					<button class="nav-button" type="button" aria-label="Вход в личный кабинет">Вход</button>
 					<section class="dropdown customer-login">
 						<h2 class="visually-hidden">Личный кабинет</h2>
@@ -71,6 +72,7 @@
 				<div class="cart">
 					<button class="nav-button" type="button" aria-label="Товары в корзине">Пусто</button>
 				</div>
+				</div>
 			</nav>
 			<section class="working-hours">
 				<h3 class="visually-hidden">Нам можно позвонить</h3>
@@ -78,7 +80,7 @@
 				<p>8 812 450-25-25</p>
 			</section>
 		</header>
-		<main class="container">
+		<main>
 			<div class="marketing-campaign-slider">
 				<!-- Здесь будет слайдер -->
 				<img src="img/creme-brulee-n-raspberry-jam-slider.png" width="1045" height="860" alt="Крем-брюле и пломбир с малиновым джемом">
@@ -91,7 +93,7 @@
 						<a href="#">
 							<h2>Малинка даром!</h2>
 						</a>
-						<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+						<p>При покупке 2 кг любого фруктового мороженого,&nbsp;добавим в ваш заказ банку малинового варенья бесплатно.</p>
 						<a class="button" href="#">Хочу варенье!</a>
 					</li>
 					<li class="half-width marketing-campaign-preview">
@@ -185,23 +187,25 @@
 					</li>
 				</ul>
 			</section>
-			<article class="half-width blog-preview">
-				<a href="#">
-					<h2>10 способов сервировки фруктовых щербетов к столу</h2>
-					<p>Новое в нашем блоге</p>
-				</a>
-			</article>
-			<section class="half-width mail-distribution">
-				<div class="subscribe-wrapper">
-				<h2 class="visually-hidden">Рассылка по электронной почте</h2>
-				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-				<form class="mail-distribution-form" action="https://echo.htmlacademy.ru" method="post">
-					<label class="visually-hidden" for="subscribe-email">Ваша почта</label>
-					<input type="email" name="subscribed-email" id="subscribe-email" placeholder="Электронная почта">
-					<button class="button" type="submit">Отправить</button>
-				</form>
-				</div>
-			</section>
+			<div class="container">
+				<article class="half-width blog-preview">
+					<a href="#">
+						<h2>10&nbsp;способов&nbsp;сервировки фруктовых щербетов к столу</h2>
+						<p>Новое в нашем блоге</p>
+					</a>
+				</article>
+				<section class="half-width mail-distribution">
+					<div class="subscribe-wrapper">
+						<h2 class="visually-hidden">Рассылка по электронной почте</h2>
+						<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+						<form class="mail-distribution-form" action="https://echo.htmlacademy.ru" method="post">
+							<label class="visually-hidden" for="subscribe-email">Ваша почта</label>
+							<input type="email" name="subscribed-email" id="subscribe-email" placeholder="Электронная почта">
+							<button class="button" type="submit">Отправить</button>
+						</form>
+					</div>
+				</section>
+			</div>
 			<section class="store-contacts">
 				<h2 class="visually-hidden">Как до нас добраться</h2>
 				<div class="map">

@@ -37,8 +37,9 @@
 					<li class="navigation-item"><a href="#">Доставка и оплата</a></li>
 					<li class="navigation-item"><a href="#">О Компании</a></li>
 				</ul>
+				<div class="user-navigation">
 				<div class="search">
-					<button class="nav-button" type="button">Открыть поиск по сайту</button>
+					<button class="nav-button" type="button" aria-label="Открыть поиск по сайту"></button>
 					<div class="dropdown site-search">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<label>
@@ -49,7 +50,7 @@
 						</form>
 					</div>
 				</div>
-				<div class="user-navigation">
+				<div class="cabinet">
 					<button class="nav-button" type="button" aria-label="Вход в личный кабинет">Вход</button>
 					<section class="dropdown customer-login">
 						<h2 class="visually-hidden">Личный кабинет</h2>
@@ -140,20 +141,25 @@
 						</form>
 					</section>
 				</div>
+				</div>
 			</nav>
+
 			<section class="working-hours">
 				<h3 class="visually-hidden">Нам можно позвонить</h3>
 				<p>С 10 до 20, ежедневно</p>
 				<p>8 812 450-25-25</p>
 			</section>
 		</header>
-		<main class="container">
+
+		<main>
 			<ul class="breadcrumbs">
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="catalog.html">Каталог</a></li>
 				<li class="breadcrumbs-current">Сливочное</li>
 			</ul>
+
 			<h1 class="page-title">Сливочное мороженое</h1>
+
 			<section class="catalog-filter">
 				<h2 class="visually-hidden">Фильтры для каталога мороженного</h2>
 				<form name="catalog-filter-form" action="https://echo.htmlacademy.ru" method="get">
@@ -227,6 +233,7 @@
 					<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>
 				</form>
 			</section>
+			
 			<section class="catalog">
 				<h2 class="visually-hidden">Каталог цен на мороженное</h2>
 				<ul class="catalog-list">

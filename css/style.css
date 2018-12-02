@@ -43,8 +43,28 @@ body {
 }
 
 a {
+	color: #ffffff;
 	text-decoration: none;
+
 	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.wrapper {
+	box-sizing: border-box;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 9px 27px 0;
 }
 
 .wrapper ul {
@@ -57,35 +77,50 @@ a {
 
 */
 
+.main-navigation {
+	display: flex;
+	box-sizing: border-box;
+	min-height: 64px;
+	align-items: center;
+}
+
 .main-header-logo {
+	width: 154px;
+	height: 64px;
+	margin-right: 24px;
+
 	border: none;
 }
 
 .site-navigation {
-	font-size: 16px;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	width: 349px;
+	justify-content: space-between;
+
 	line-height: 18px;
 	font-weight: bold;
-	color: #ffffff;
-
-	background-color: #849d8f;
 }
 
 .navigation-item > a {
-	color: #ffffff;
+	/*color: #ffffff;*/
 }
 
-.navigation-item > a:hover {
-	padding: 10px 14px;
+.navigation-item > a:hover { 
+	box-sizing: border-box;
+	/*padding: 8px 13px;*/ /* Пока нет решения: пункты меню двигают друг друга при наведении */
 
 	color: #333333;
 
 	border: none;
 	background-color: #f7f6f3;
+	background-size: 87px 32px;
 	border-radius: 25px;
 }
 
 .navigation-item > a:active {
-	padding: 10px 14px;
+	/*padding: 10px 14px;*/ /* Пока нет решения: пункты меню двигают друг друга при наведении */
 
 	color: #323232;
 
@@ -96,7 +131,7 @@ a {
 }
 
 .navigation-item-current > a {
-	padding: 10px 14px;
+	/*padding: 10px 14px;*/ /* Пока нет решения: пункты меню двигают друг друга при наведении */
 	color: #ffffff;
 
 	border: none;
@@ -105,7 +140,7 @@ a {
 }
 
 .navigation-item-current > a:hover {
-	padding: 10px 14px;
+	/*padding: 10px 14px;*/
 	color: #ffffff;
 
 	border: none;
@@ -117,11 +152,11 @@ a {
 Скройте их с помощью display: none. 
 Мы вернёмся к ним в седьмом разделе. */
 .modal {
-	/*display: none;*/
+	display: none;
 }
 
 .dropdown {
-	/*display: none;*/
+	display: none;
 }
 
 .site-navigation-submenu {
@@ -167,14 +202,24 @@ a {
 }
 
 .nav-button {
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 500;
+	line-height: 16px;
 	text-align: center;
+	color: #ffffff;
 
-	background-color: #ffffff;
-	opacity: 0.2;
+	background-color: rgba(255,255,255,0.2);
 	border: none;
 	border-radius: 25px;
+}
+
+.user-navigation .nav-button {
+	margin-right: 10px;
+}
+
+.cart .nav-button {
+	margin-right: 0px;
 }
 
 .nav-button:hover {
@@ -186,7 +231,14 @@ a {
 	border-radius: 25px;
 }
 
+.user-navigation {
+	display: flex;
+	width: 245px;
+	margin-left: auto;
+}
+
 .wrapper input {
+	box-sizing: border-box;
 	height: 44px;
 
 	font-size: 16px;
@@ -201,6 +253,11 @@ a {
 	border-radius: 5px;
 }
 
+.search .nav-button {
+	width: 33px;
+	height: 33px;
+}
+
 .site-search {
 	width: 341px;
 	height: 84px;
@@ -210,7 +267,12 @@ a {
 	border-radius: 5px;
 }
 
-.user-navigation > .nav-button::before {
+.cabinet .nav-button {
+	width: 93px;
+	height: 33px;
+}
+
+.cabinet > .nav-button::before {
 	content: "";
 	background-image: url("../img/enter.svg");
 }
@@ -259,6 +321,16 @@ a {
 	font-weight: 400;
 	color: #e84d37;
 	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.cart .nav-button {
+	width: 100px;
+	height: 33px;
+}
+
+.cart > .nav-button::before {
+	content: "";
+	background-image: url("../img/cart.svg");
 }
 
 .order-list {
@@ -320,32 +392,51 @@ a {
 }
 
 .marketing-campaign-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
 	font-size: 18px;
 	font-weight: 700;
 	color: #ffffff;
 }
 
 .marketing-campaign-preview {
+	display: flex;
+	flex-direction: column;
 	height: 229px;
+	padding-bottom: 23px;
 }
 
 .marketing-campaign-preview h2,
 .marketing-campaign-preview p {
+	margin: 0;
 	margin-left: 20px;
 }
 
 .marketing-campaign-preview h2 {
+	margin-top: 23px;
 	font-size: 35px;
+}
+
+.marketing-campaign-preview p {
+	width: 510px;
+	margin-top: 20px;
+
+	letter-spacing: -1px;
 }
 
 .marketing-campaign-list li:first-child {
 	background-color: #73172b;
 	background-image: url("../img/raspberry-bg.jpg");
+	background-size: cover;
 }
 
 .marketing-campaign-list li:last-child {
 	background-color: #3a2217;
 	background-image: url("../img/chocolate-bg.jpg");
+	background-size: cover;
 }
 
 .marketing-campaign-preview a {
@@ -353,26 +444,35 @@ a {
 	border: none;
 }
 
-/*@counter-style catalog-breadcrumbs {
-  system: fixed;
-  symbols: »;
-  suffix: " ";
-}*/
+.marketing-campaign-preview .button {
+	box-sizing: border-box;
+	height: 45px;
+	align-self: flex-end;
+	margin-top: auto;
+	margin-right: 21px;
+	padding: 10px 22px 0 22px;
+	
+	font-size: 18px;
+	line-height: 24px;
+}
 
 .breadcrumbs {
+	display: flex;
+	padding: 0;
+	margin: 0;
+
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 400;
-
-	/*list-style-image: url("../img/test.svg");*/
 }
 
 .breadcrumbs a {
 	color: #ffffff;
 }
 
-.breadcrumbs li::after/*:not(.breadcrumbs-current)*/ {
+.breadcrumbs li::after {
 	content: " » ";
+	margin: 0 5px 0 5px;
 }
 
 .breadcrumbs .breadcrumbs-current::after {
@@ -380,9 +480,15 @@ a {
 }
 
 .page-title {
+	margin-top: 10px;
+
 	font-size: 35px;
 	font-weight: 700;
 	line-height: 41px;
+}
+
+.catalog-filter-list {
+	padding: 0;
 }
 
 /*.filter-item {
@@ -410,9 +516,7 @@ a {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Попытаться закруглить изображения товара в цвет фона страницы*/
-
-.catalog-item-image {
+.catalog-item-image { /* Попытаться закруглить изображения товара в цвет фона страницы*/
 	width: 267px;
 
 	background-color: #849d8f;
@@ -441,6 +545,8 @@ a {
 .catalog-item-price-value {
 	font-size: 45px;
 	font-weight: 700;
+	line-height: 45px;
+	/*добавить правильный word-spacing или блок вместо пробела с нужной шириной*/
 }
 
 .catalog-item-price-measure {
@@ -449,8 +555,12 @@ a {
 }
 
 .features {
+	box-sizing: border-box;
 	width: 1146px;
 	height: 306px;
+	margin-bottom: 40px;
+	padding-top: 30px;
+	padding-bottom: 25px;
 
 	/*font-size: 16px;*/
 	font-weight: 400;
@@ -464,6 +574,9 @@ a {
 }
 
 .features h1 {
+	margin: 0;
+	margin-left: 20px;
+
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 30px;
@@ -473,6 +586,7 @@ a {
 .features-list {
 	/*list-style: none;*/
 	column-width: 470px;
+	margin: 25px 0 25px 0;
 	/*column-count: 2;*/
 }
 
@@ -496,22 +610,43 @@ a {
 	background-image: url("../img/thermo.svg");
 }
 
+.features-item p {
+	width: 476px;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 40px;
+}
+
 .blog-preview {
 	height: 220px;
 
 	background-image: url("../img/blog-preview-bg.jpg");
-	background-position: top center;
-	background-repeat: no-repeat;
-	
+	background-size: cover;
+}
+
+.blog-preview a {
+	display: flex;
+	flex-direction: column;
 }
 
 .blog-preview p {
+	margin: 26px 0 0 20px;
+
 	font-size: 16px;
 	font-weight: 500;
 }
 
 .blog-preview h2 {
-	width: 286px;
+	order: 1;
+	width: 295px;
+	margin: 0;
+	margin: 13px 0 0 20px;
 
 	font-size: 24px;
 	font-weight: 700;
@@ -520,14 +655,19 @@ a {
 	text-decoration-line: underline;
 }
 
+.blog-preview h2:hover {
+	color: #e84d37;
+}
+
 .blog-preview a {
 	color: #323232;
 }
 
 .mail-distribution {
+	display: flex;
 	height: 220px;
 
-	font-size: 16px;
+	/*font-size: 16px;*/
 	color: #5a5a5a;
 
 	background-image: url("../img/mail-bg.svg");
@@ -536,11 +676,34 @@ a {
 }
 
 .subscribe-wrapper {
-	width: 549px;
-	height: 211px;
+	margin: 5px;
+	/*width: 549px;
+	height: 211px;*/
 	border-radius: 10px;
 	background-color: #f8f7f4;
-	background-position: 50% 50%;
+}
+
+.subscribe-wrapper p {
+	padding: 33px 22px 0;
+	margin: 0;
+}
+
+.mail-distribution-form {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 38px;
+	padding: 0 22px 0 22px;
+}
+
+.mail-distribution-form input {
+	margin-right: 10px;
+	flex-grow: 1;
+}
+
+.map {
+	/*box-sizing: border-box;
+	width: 100%;
+	margin: auto;*/
 }
 
 .contacts-wrapper {
@@ -568,7 +731,6 @@ a {
 
 .contacts-wrapper p:first-of-type {
 	width: 148px;
-
 }
 
 .modal-feedback {
@@ -621,8 +783,7 @@ a {
 	width: 27px;
 	height: 26px;
 
-	opacity: 0.2;
-	background-color: #ffffff;
+	background-color: rgba(255,255,255,0.2);
 }
 
 .pagination-current {
@@ -632,7 +793,7 @@ a {
 	background-color: #ffffff;
 }
 
-.container ul:last-child::after { /*Разделитель перед футером в catalog*/
+.pagination-list::after { /*Разделитель перед футером в catalog*/
 	content: "";
 	width: 1146px;
 	height: 1px;
@@ -646,40 +807,62 @@ a {
 
 */
 
+.main-footer {
+	display: flex;
+	height: 103px;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.main-footer ul,
+.main-footer > p {
+	margin-bottom: 30px;
+}
+
+.footer-social ul {
+	display: flex;
+	width: 194px;
+	justify-content: space-between;
+	padding: 0;
+}
+
 .footer-social li {
 	width: 38px;
 	height: 38px;
-	opacity: 0.5;
-	background-color: #ffffff;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 50%;
 }
 
 .footer-social a {
+	display: block;
+	height: 38px;
+	
+	font-size: 0;
 	border: none;
-	opacity: 0;
-	background-color: #ffffff;
+	/*background-color: #849d8f;*/ /* Пока нет решения: подложка под li закрывает полупрозрачностью фон под иконками, либо наоборот */
 }
 
 .social-tw {
 	background-image: url("../img/tw.svg");
-	background-position: top center;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
 .social-ig {
 	background-image: url("../img/ig.svg");
-	background-position: top center;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
 .social-fb {
 	background-image: url("../img/fb.svg");
-	background-position: top center;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
 .social-vk {
 	background-image: url("../img/vk.svg");
-	background-position: top center;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
@@ -687,6 +870,7 @@ a {
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 18px;
+	column-count: 2;
 }
 
 .documentation-list a {
@@ -703,6 +887,8 @@ a {
 }
 
 .footer-copyright {
+	margin: 0;
+
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: 400;
@@ -716,4 +902,5 @@ a {
 	content: "";
 	background-image: url("../img/logo-htmlacademy-small.svg");
 	background-repeat: no-repeat;
+	background-size: 108px 39px;
 }
