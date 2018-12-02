@@ -42,7 +42,7 @@
 					<button class="nav-button" type="button" aria-label="Открыть поиск по сайту"></button>
 					<div class="dropdown site-search">
 						<form action="https://echo.htmlacademy.ru" method="post">
-							<label>
+							<label class="search-bar">
 								Поисковая строка
 								<input type="search" name="site-search" placeholder="Что ищем?">
 							</label>
@@ -70,7 +70,7 @@
 					</section>					
 				</div>
 				<div class="cart">
-					<button class="nav-button" aria-label="Товары в корзине">2 товара</button>
+					<button class="nav-button filled-cart" aria-label="Товары в корзине">2 товара</button>
 					<section class="dropdown order-list">
 						<h2 class="visually-hidden">Товары в корзине</h2>
 						<form class="order-list-form" action="https://echo.htmlacademy.ru" method="post">
@@ -120,8 +120,8 @@
 											<input type="hidden" name="order-item-price-2" value="300">
 										</td>
 										<td>
-											<span>400 руб.</span>
-											<input type="hidden" name="order-item-cost-2" value="400">
+											<span>450 руб.</span>
+											<input type="hidden" name="order-item-cost-2" value="450">
 										</td>
 									</tr>
 								</tbody>
@@ -162,7 +162,7 @@
 
 			<section class="catalog-filter">
 				<h2 class="visually-hidden">Фильтры для каталога мороженного</h2>
-				<form name="catalog-filter-form" action="https://echo.htmlacademy.ru" method="get">
+				<form class="catalog-filter-form" name="catalog-filter-form" action="https://echo.htmlacademy.ru" method="get">
 					<ul class="catalog-filter-list">
 						<li>
 							<h3>
