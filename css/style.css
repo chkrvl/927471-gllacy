@@ -695,6 +695,8 @@ a {
 }
 
 .catalog-item-title {
+	display: inline-block;
+	width: 240px;
 	padding: 0;
 	margin: 0;
 
@@ -702,8 +704,10 @@ a {
 	font-weight: 500;
 	line-height: 22px;
 	color: #ffffff;
+	text-decoration: underline;
+	text-decoration-color: rgba(255,255,255,0.2);
 
-	border-bottom: 1px solid rgba(255,255,255,0.2);
+	/*border-bottom: 1px solid rgba(255,255,255,0.2);*/
 }
 
 .catalog-item-title:hover {
@@ -940,14 +944,18 @@ a {
 }
 
 .modal-feedback {
+	box-sizing: border-box;
 	width: 478px;
 	height: 443px;
+	padding: 20px 25px 0 24px;
 
 	border-radius: 10px;
 	background-color: #f8f7f4;
 }
 
 .modal-feedback h2 {
+	margin: 0 0 20px 0;
+
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 28px;
@@ -955,22 +963,59 @@ a {
 	text-align: left;
 }
 
+.feedback-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.feedback-form p {
+	padding: 0;
+	margin: 0;
+}
+
+.feedback-form input {
+	width: 267px;
+	margin-bottom: 20px;
+}
+
 .feedback-form textarea {
+	box-sizing: border-box;
+	width: 100%;
+	/*height: 155px;*/
+
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	color: #999999;
 	text-align: left;
+	padding-left: 15px;
+	padding-top: 13px;
 
 	background-color: #ffffff;
-	border: 1px solid rgba(178 178 178, 0.52);
+	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 }
 
+.feedback-form .button {
+	width: 139px;
+	height: 44px;
+	margin-top: 25px;
+	align-self: flex-end;
+}
+
 .modal-close {
+	float: right;
+	width: 18px;
+	height: 18px;
+
+	font-size: 0;
+
 	background-image: url("../img/cross.svg");
 	background-position: top center;
 	background-repeat: no-repeat;
+	background-color: #f8f7f4;
+	border: none;
 }
 
 .pagination-list {
@@ -1072,21 +1117,25 @@ a {
 .social-tw {
 	background-image: url("../img/tw.svg");
 	background-repeat: no-repeat;
+	opacity: 0.8;
 }
 
 .social-ig {
 	background-image: url("../img/ig.svg");
 	background-repeat: no-repeat;
+	opacity: 0.8;
 }
 
 .social-fb {
 	background-image: url("../img/fb.svg");
 	background-repeat: no-repeat;
+	opacity: 0.8;
 }
 
 .social-vk {
 	background-image: url("../img/vk.svg");
 	background-repeat: no-repeat;
+	opacity: 0.8;
 }
 
 .documentation-list {
