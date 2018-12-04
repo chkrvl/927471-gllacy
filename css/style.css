@@ -49,6 +49,11 @@ a {
 	border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
+/*img {
+	width: 100%;
+	height: auto;
+}*/
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -94,13 +99,18 @@ a {
 
 .site-navigation {
 	display: flex;
+	flex-wrap: wrap;
+	width: 700px;
 	margin: 0;
+	margin-right: auto;
 	padding: 0;
-	width: 349px;
-	justify-content: space-between;
-
+	
 	line-height: 18px;
 	font-weight: bold;
+}
+
+.navigation-item {
+	margin-right: 25px;
 }
 
 .navigation-item > a {
@@ -132,6 +142,10 @@ a {
 	border-radius: 25px;
 }
 
+.navigation-item:first-child {
+	position: relative;
+}
+
 .navigation-item-current > a {
 	/*padding: 10px 14px;
 	Пока нет решения: пункты меню двигают друг друга при наведении */
@@ -155,16 +169,20 @@ a {
 Скройте их с помощью display: none. 
 Мы вернёмся к ним в седьмом разделе. */
 .modal {
+	position: fixed;
 	display: none;
 }
 
 .dropdown {
-	display: none;
+	position: absolute;
 }
 
 .site-navigation-submenu {
+	top: 25px;
+	left: -20px;
+
 	box-sizing: border-box;
-	width: 143px;
+	min-width: 143px;
 	padding: 10px 0;
 
 	font-weight: 400;
@@ -179,8 +197,9 @@ a {
 .site-navigation-submenu a {
 	display: inline-block;
 	box-sizing: border-box;
+	width: 100%;
 	height: 28px;
-	margin-left: 20px;
+	padding-left: 20px;
 	padding-top: 3px;
 	
 	vertical-align: middle;
@@ -201,7 +220,7 @@ a {
 }
 
 .navigation-submenu-item {
-	height: 28px;
+	/*height: 28px;*/
 }
 
 .navigation-submenu-item:hover {
@@ -226,7 +245,18 @@ a {
 	background-color: #d07058;
 }
 
+.user-navigation {
+	display: flex;
+	align-items: center;
+	width: 245px;
+	margin-left: auto;
+}
+
 .nav-button {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 500;
@@ -239,27 +269,26 @@ a {
 	border-radius: 25px;
 }
 
+.nav-button:hover {
+	color: #323232;
+
+	background-color: #ffffff;
+	/*opacity: 1;*/
+	border: none;
+	border-radius: 25px;
+}
+
+.nav-button:hover path {
+	fill: #323232;
+}
+
 .user-navigation .nav-button {
+	padding: 8.5px 15px 8.5px 45px;
 	margin-right: 10px;
 }
 
 .cart .nav-button {
 	margin-right: 0px;
-}
-
-.nav-button:hover {
-	color: #323232;
-
-	background-color: #ffffff;
-	opacity: 1;
-	border: none;
-	border-radius: 25px;
-}
-
-.user-navigation {
-	display: flex;
-	width: 245px;
-	margin-left: auto;
 }
 
 .wrapper input {
@@ -278,12 +307,24 @@ a {
 	border-radius: 5px;
 }
 
+.search {
+	position: relative;
+}
+
 .search .nav-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+
 	width: 33px;
 	height: 33px;
 }
 
 .site-search {
+	bottom: -88px;
+	right: 10px;
+
 	box-sizing: border-box;
 	width: 341px;
 	height: 84px;
@@ -302,17 +343,27 @@ a {
 	width: 100%;
 }
 
-.cabinet .nav-button {
-	width: 93px;
-	height: 33px;
+.cabinet {
+	position: relative;
 }
 
-.cabinet > .nav-button::before {
-	content: "";
-	background-image: url("../img/enter.svg");
+.cabinet .nav-button {
+	display: flex;
+	position: relative;
+}
+
+.cabinet .icon {
+	width: 21px;
+	height: 19px;
+
+	position: absolute;
+	left: 17px;
 }
 
 .customer-login {
+	bottom: -218px;
+	right: 10px;
+
 	box-sizing: border-box;
 	width: 277px;
 	height: 214px;
@@ -378,18 +429,45 @@ a {
 	border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
+.cart {
+	position: relative;
+}
+
 .cart .nav-button {
-	width: 100px;
-	height: 33px;
+	position: relative;
 }
 
 .cart > .nav-button::before {
 	content: "";
+
+	position: absolute;
+	left: 16px;
+	top: 7px;
+
+	width: 21px;
+	height: 20px;
+
 	background-image: url("../img/cart.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.cart .nav-button:hover::before {
+	background-image: url("../img/red-cart.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 .cart .filled-cart {
-	min-width: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+	min-width: 117px;
+	padding-left: 36px;
+
 	color: #323232;
 
 	background-color: #f8f7f4;
@@ -397,10 +475,23 @@ a {
 
 .cart .filled-cart::before {
 	content: "";
+
+	position: absolute;
+	left: 14px;
+	top: auto;
+
+	width: 21px;
+	height: 20px;
+
 	background-image: url("../img/red-cart.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 .order-list {
+	top: 37px;
+	right: 0;
+
 	box-sizing: border-box;
 	width: 540px;
 	padding: 20px 14px 0 16px;
@@ -462,15 +553,19 @@ a {
 }
 
 .working-hours p {
-	margin: 8px 0 0 0;
+	margin: 0;
 	font-size: 14px;
+	line-height: 16px;
 	font-weight: 700;
 	color: #ffffff;
 }
 
 .working-hours p:last-child {
+	margin-top: 5px;
+
 	font-size: 22px;
 	font-weight: 700;
+	line-height: 24px;
 }
 
 /*
@@ -634,30 +729,24 @@ a {
 	align-content: space-between;
 	flex-wrap: wrap;
 	padding: 0;
-	margin: 0;
-	margin-top: 40px;
-}
-
-.catalog-item::after {
-	content: "";
-    width: 61px;
-    height: 61px;
-	background-image: url("../img/hit.svg");
-	background-repeat: no-repeat;
-	background-size: 61px 61px;
+	margin: 0 -28px;
+	margin-top: 34px;
 }
 
 .catalog-item {
 	width: 267px;
+	
+	position: relative;
+
     border-radius: 5px;
-    padding: 0;
+    padding: 6px 14px 0;
     margin: 0;
-    box-sizing: border-box;
+    margin-bottom: 34px;
+    /*box-sizing: border-box;*/
 }
 
 .catalog-item:hover {
-	width: 293px;
-	min-height: 405px;
+	/*min-height: 405px;*/
 
 	background-color: rgba(255, 255, 255, 0.2);
 }
@@ -665,6 +754,8 @@ a {
 .catalog-item a {
 	display: flex;
 	flex-direction: column;
+
+	position: relative;
 
 	border: none;
 }
@@ -694,6 +785,20 @@ a {
 	/*Найти способ убирать «старый» цвет рамки изображения при наведении */
 }
 
+.best-selling .catalog-item-image::after {
+	content: "";
+
+	position: absolute;
+	top: 0px;
+
+    width: 61px;
+    height: 61px;
+
+	background-image: url("../img/hit.svg");
+	background-repeat: no-repeat;
+	background-size: 61px 61px;
+}
+
 .catalog-item-title {
 	display: inline-block;
 	width: 240px;
@@ -715,6 +820,11 @@ a {
 }
 
 .catalog-item-price {
+	position: absolute;
+	top: 200px;
+	
+	margin: 0;
+
 	text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 }
 
@@ -731,6 +841,10 @@ a {
 }
 
 .catalog-item .button {
+	position: absolute;
+	left: 46px;
+	top: 335px;
+
 	width: 200px;
 	height: 44px;
 
@@ -741,14 +855,13 @@ a {
 	box-sizing: border-box;
 	width: 1146px;
 	height: 306px;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 	margin-bottom: 40px;
 	padding-top: 30px;
 	padding-bottom: 25px;
+	padding-right: 20px;
 
-	/*font-size: 16px;*/
 	font-weight: 400;
-	/*line-height: 22px;*/
 	color: #323232;
 
 	background-image: url("../img/waffles-bg.jpg");
@@ -760,6 +873,7 @@ a {
 .features h1 {
 	margin: 0;
 	margin-left: 20px;
+	margin-bottom: 26px;
 
 	font-size: 24px;
 	font-weight: 500;
@@ -768,35 +882,70 @@ a {
 }
 
 .features-list {
-	/*list-style: none;*/
-	column-width: 470px;
-	margin: 25px 0 25px 0;
-	/*column-count: 2;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	margin: 0;
+	padding-left: 76px;
 }
 
 .features-item:first-of-type::before {
 	content: "";
+
+	position: absolute;
+	top: -16px;
+	left: -57px;
+	width: 49px;
+	height: 49px;
+
 	background-image: url("../img/icecream.svg");
 }
 
 .features-item:nth-of-type(2)::before {
 	content: "";
-	background-image: url("../img/leaf.svg");
+
+	position: absolute;
+	top: -16px;
+	left: -57px;
+	width: 49px;
+	height: 49px;
+
+	background-image: url("../img/cow.svg");
 }
 
 .features-item:nth-of-type(3)::before {
 	content: "";
-	background-image: url("../img/cow.svg");
+
+	position: absolute;
+	top: -16px;
+	left: -57px;
+	width: 49px;
+	height: 49px;
+
+	background-image: url("../img/leaf.svg");
 }
 
 .features-item:last-of-type::before {
 	content: "";
+
+	position: absolute;
+	top: -16px;
+	left: -57px;
+	width: 49px;
+	height: 49px;
+
 	background-image: url("../img/thermo.svg");
 }
 
-.features-item p {
+.features-item {
+	position: relative;
 	width: 476px;
+}
+
+.features-item p {
 	margin: 0;
+	margin-bottom: 10px;
 	padding: 0;
 }
 
@@ -883,13 +1032,21 @@ a {
 	flex-grow: 1;
 }
 
+.store-contacts {
+	position: relative;
+}
+
 .map { /* Сделать карту шире, чем .wrapper */
-	/*box-sizing: border-box;
-	width: 100%;
-	margin: auto;*/
+	/*box-sizing: border-box;*/
+	/*width: 100%;*/
+	margin: auto -25px;
 }
 
 .contacts-wrapper {
+	position: absolute;
+	top: 63px;
+	right: 27px;
+
 	box-sizing: border-box;
 	width: 302px;
 	height: 305px;
@@ -944,6 +1101,9 @@ a {
 }
 
 .modal-feedback {
+	top: 35vh;
+	left: 35vw;
+
 	box-sizing: border-box;
 	width: 478px;
 	height: 443px;
