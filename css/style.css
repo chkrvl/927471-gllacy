@@ -1305,8 +1305,9 @@ a {
 	column-count: 2;
 }
 
-.documentation-list a {
-	color: #ffffff;
+.documentation-list a:hover,
+.documentation-list a:active {
+	color: #ffbc9e;
 }
 
 .documentation-list li:first-of-type {
