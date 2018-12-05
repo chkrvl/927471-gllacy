@@ -966,6 +966,10 @@ a {
 .blog-preview a {
 	display: flex;
 	flex-direction: column;
+
+	color: #323232;
+
+	border: none;
 }
 
 .blog-preview p {
@@ -990,10 +994,6 @@ a {
 
 .blog-preview h2:hover {
 	color: #e84d37;
-}
-
-.blog-preview a {
-	color: #323232;
 }
 
 .mail-distribution {
