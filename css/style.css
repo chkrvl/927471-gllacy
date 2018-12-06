@@ -36,10 +36,10 @@ body {
 	font-weight: 500;
 	color: #ffffff;
 	
-
 	background-color: #849d8f;
 	background-position: top center;
 	background-repeat: no-repeat;
+	
 }
 
 a {
@@ -76,6 +76,16 @@ a {
 	list-style-type: none;
 }
 
+.modal {
+	position: fixed;
+	display: none;
+}
+
+.dropdown {
+	position: absolute;
+	display: none;
+}
+
 /* 
 
 Стили шапки сайта 
@@ -110,80 +120,85 @@ a {
 }
 
 .navigation-item {
-	margin-right: 25px;
+	margin-right: 5px;
+	padding: 8px 13px;
 }
 
-.navigation-item > a {
-	/*color: #ffffff;*/
-}
-
-.navigation-item > a:hover { 
-	box-sizing: border-box;
-	/*padding: 8px 13px;
-	Пока нет решения: пункты меню двигают друг друга при наведении */
-
-	color: #333333;
-
-	border: none;
+.navigation-item:hover {
 	background-color: #f7f6f3;
-	background-size: 87px 32px;
 	border-radius: 25px;
 }
 
-.navigation-item > a:active {
-	/*padding: 10px 14px;
-	Пока нет решения: пункты меню двигают друг друга при наведении */
-
+.navigation-item:active {
 	color: #323232;
 
-	border: none;
 	background-color: #ededed;
 	box-shadow: inset 0px 2px 1px 0 #696969;
 	border-radius: 25px;
+}
+
+.navigation-item:hover > a { 
+	color: #333333;
+
+	border: none;
+}
+
+.navigation-item > a:active {
+	color: #323232;
+
+	border: none;
 }
 
 .navigation-item:first-child {
 	position: relative;
 }
 
+.navigation-item-current {
+	margin-right: 5px;
+	padding: 8px 13px;
+
+	background-color: #d07058;
+	border-radius: 25px;
+}
+
+.navigation-item-current:hover {
+	background-color: #d07058;
+	border-radius: 25px;
+}
+
+.navigation-item-current:active {
+	background-color: #d07058;
+	border-radius: 25px;
+	box-shadow: none; /*Возможно, кнопка активного пункта меню тоже должна кликаться, тогда убрать*/
+}
+
 .navigation-item-current > a {
-	/*padding: 10px 14px;
-	Пока нет решения: пункты меню двигают друг друга при наведении */
 	color: #ffffff;
 
 	border: none;
-	background-color: #d07058;
-	border-radius: 25px;
 }
 
-.navigation-item-current > a:hover {
-	/*padding: 10px 14px;*/
+.navigation-item-current:hover > a {
 	color: #ffffff;
 
 	border: none;
-	background-color: #d07058;
-	border-radius: 25px;
 }
 
-/* Попапы и всплывающие элементы сейчас стилизовать не нужно. 
-Скройте их с помощью display: none. 
-Мы вернёмся к ним в седьмом разделе. */
-.modal {
-	position: fixed;
-	display: none;
-}
-
-.dropdown {
-	position: absolute;
+/*Разобраться, как сделать выпадение подменю по фокусу на пункте меню */
+.navigation-item:hover .site-navigation-submenu,
+.navigation-item:focus ~ .site-navigation-submenu,
+.navigation-item ~ .site-navigation-submenu:hover {
+	display: block;
 }
 
 .site-navigation-submenu {
-	top: 25px;
+	top: 37px;
 	left: -20px;
 
 	box-sizing: border-box;
 	min-width: 143px;
 	padding: 10px 0;
+	z-index: 20;
 
 	font-weight: 400;
 	font-size: 14px;
@@ -209,13 +224,21 @@ a {
 }
 
 .navigation-submenu-item:first-of-type a {
+	position: relative;
+	margin-bottom: 10px;
+
 	font-weight: 700;
 }
 
 .navigation-submenu-item:first-of-type a::after {
 	content: "";
+
+	position: absolute;
+	bottom: -5px;
+    left: 6px;
 	width: 128px;
 	height: 1px;
+
 	background-color: rgba(137, 150, 166, 0.2);
 }
 
@@ -223,11 +246,11 @@ a {
 	/*height: 28px;*/
 }
 
-.navigation-submenu-item:hover {
+.navigation-submenu-item:hover:not(.navigation-submenu-item-current):not(:first-of-type) {
 	background-color: #fbded7;
 }
 
-.navigation-submenu-item:active {
+.site-navigation-submenu .navigation-submenu-item:active:not(.navigation-submenu-item-current):not(:first-of-type) {
 	background-color: #f6b5a5;
 }
 
@@ -262,6 +285,7 @@ a {
 	font-weight: 500;
 	line-height: 16px;
 	text-align: center;
+	vertical-align: middle;
 	color: #ffffff;
 
 	background-color: rgba(255,255,255,0.2);
@@ -273,7 +297,6 @@ a {
 	color: #323232;
 
 	background-color: #ffffff;
-	/*opacity: 1;*/
 	border: none;
 	border-radius: 25px;
 }
@@ -321,6 +344,12 @@ a {
 	height: 33px;
 }
 
+.nav-button:hover ~ .site-search,
+.nav-button:focus-within ~ .site-search,
+.nav-button .site-search:hover {
+	display: block;
+}
+
 .site-search {
 	bottom: -88px;
 	right: 10px;
@@ -329,6 +358,7 @@ a {
 	width: 341px;
 	height: 84px;
 	padding: 20px 15px;
+	z-index: 20;
 
 	background-color: #f8f7f4;
 	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -352,6 +382,12 @@ a {
 	position: relative;
 }
 
+.nav-button:hover ~ .customer-login,
+.nav-button:focus-within ~ .customer-login,
+.nav-button ~ .customer-login:hover {
+	display: block;
+}
+
 .cabinet .icon {
 	width: 21px;
 	height: 19px;
@@ -368,6 +404,7 @@ a {
 	width: 277px;
 	height: 214px;
 	padding: 20px 17px 22px 19px;
+	z-index: 20;
 
 	background-color: #f8f7f4;
 	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -488,13 +525,21 @@ a {
 	background-position: 0 0;
 }
 
+/*Разобраться, как сделать перебор пунктов в листе заказов tabом после фокуса на кнопку Корзины*/
+.filled-cart:hover ~ .order-list,
+.filled-cart:focus ~ .order-list,
+ .filled-cart ~ .order-list:hover {
+	display: block;
+} 
+
 .order-list {
 	top: 37px;
 	right: 0;
 
 	box-sizing: border-box;
 	width: 540px;
-	padding: 20px 14px 0 16px;
+	/*padding: 20px 14px 0 16px;*/
+	z-index: 20;
 
 	font-size: 13px;
 	line-height: 16px;
@@ -504,6 +549,11 @@ a {
 	background-color: #f8f7f4;
 	border-radius: 5px;
 	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.order-list-form table {
+	border-spacing: 16px 20px;
+	border-collapse: separate;
 }
 
 .revoke-order {
@@ -519,15 +569,51 @@ a {
 	border: none;
 }
 
+.order-item-name-cell {
+	min-width: 215px;
+	margin: 0;
+	padding: 0;
+}
+
+.weight-n-price {
+	min-width: 96px;
+	margin: 0;
+	padding: 0;
+}
+
+.order-item-cost-cell {
+	min-width: 52px;
+}
+
 .order-list-form img {
+	width: 33px;
+	height: 33px;
+
 	border-radius: 50%;
 }
 
 .order-total-cost {
+	
+
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: 700;
 	text-align: right;
+}
+
+.order-total-cost::before {
+	content: "";
+	
+	position: absolute;
+	bottom: : 112px;
+	left: 15px;
+	width: 510px;
+	height: 1px;
+	background-color: #cacac7;
+}
+
+.order-total-cost-value {
+	min-width: 62px;
 }
 
 .weight-n-price span:nth-of-type(2) {
@@ -538,7 +624,7 @@ a {
 	float: right;
 	width: 170px;
 	height: 44px;
-	margin-top: 10px;
+	margin-right: 15px;
 	margin-bottom: 21px;
 }
 
@@ -573,6 +659,130 @@ a {
 Стили основного содержимого 
 
 */
+
+.background-changer {
+	min-width: 1200px;
+	
+	background-color: #849d8f;
+	background-image: url("../img/creme-brulee-n-raspberry-jam-slider.png");
+	background-position: top center;
+	background-repeat: no-repeat;
+
+	transition: background-image 1s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/choco-icecream-n-lemon-sorbet-slider.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/fondant-icecream-n-strawberry-sorbet-slider.png");
+}
+
+.main-content {
+	position: relative;
+}
+
+.marketing-campaign-slider {
+	text-align: center;
+	padding-top: 284px;
+	margin-bottom: 40px;
+}
+
+.slider-list {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.slide {
+	display: none;
+}
+
+.slide-title {
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 26px;
+
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 700;
+}
+
+.slide-button {
+	display: inline-block;
+	padding: 12px 42px;
+
+	font-size: 32px;
+	line-height: 44px;
+	font-weight: 700;
+	vertical-align: top;
+	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+	text-decoration: none;
+
+	background-image: linear-gradient(to top, #e74a35, #f26843);
+	box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+	border: none;
+	border-radius: 50px;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  z-index: 20;
+  
+  font-size: 0;
+}
+
+.slider-controls label {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+
+	vertical-align: top;
+
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#product-1:checked ~ .background-changer {
+	background-color: #849d8f;
+	background-image: url("../img/creme-brulee-n-raspberry-jam-slider.png");
+}
+
+#product-2:checked ~ .background-changer {
+	background-color: #8996a6;
+	background-image: url("../img/choco-icecream-n-lemon-sorbet-slider.png");
+}
+
+#product-3:checked ~ .background-changer {
+	background-color: #9d8b84;
+	background-image: url("../img/fondant-icecream-n-strawberry-sorbet-slider.png");
+}
+
+#product-1:checked ~ .background-changer #slide1,
+#product-2:checked ~ .background-changer #slide2,
+#product-3:checked ~ .background-changer #slide3 {
+	display: block;
+}
+
+#product-1:checked ~ .background-changer label[for="product-1"],
+#product-2:checked ~ .background-changer label[for="product-2"],
+#product-3:checked ~ .background-changer label[for="product-3"] {
+	background-color: #ffffff;
+}
 
 .half-width {
 	width: 560px;
@@ -717,12 +927,6 @@ a {
 	background-color: #ededed;
 }
 
-/*.filter-item {
-	height: 37px;
-	opacity: 0.2;
-	background-color: #ffffff;
-}*/
-
 .catalog-list {
 	display: flex;
 	justify-content: space-between;
@@ -749,6 +953,7 @@ a {
 	/*min-height: 405px;*/
 
 	background-color: rgba(255, 255, 255, 0.2);
+	background-size: 400px 50px;
 }
 
 .catalog-item a {
@@ -773,7 +978,7 @@ a {
 	padding: 0;
 	margin: 0;
 
-	background-color: #849d8f;
+	background-color: transparent;
 }
 
 .catalog-item-image img {
@@ -809,6 +1014,7 @@ a {
 	font-weight: 500;
 	line-height: 22px;
 	color: #ffffff;
+	vertical-align: top;
 	text-decoration: underline;
 	text-decoration-color: rgba(255,255,255,0.2);
 
@@ -841,14 +1047,23 @@ a {
 }
 
 .catalog-item .button {
+	display: none;
+
 	position: absolute;
 	left: 46px;
 	top: 335px;
+	z-index: 100;
 
 	width: 200px;
 	height: 44px;
 
 	text-align: center;
+}
+
+.catalog-item:hover .button,
+.catalog-item:focus-within ~ .button,
+.catalog-item .button:hover {
+	display: block;
 }
 
 .features {
@@ -1091,6 +1306,8 @@ a {
 .contacts-wrapper span {
 	display: inline-block;
 	margin-top: 10px;
+
+	vertical-align: middle;
 }
 
 .contacts-wrapper .button {
@@ -1263,6 +1480,11 @@ a {
 	border-radius: 50%;
 }
 
+.footer-social li:hover,
+.footer-social li:active {
+	border-color: rgba(255,255,255,0.7);
+}
+
 .footer-social a {
 	display: block;
 	box-sizing: border-box;
@@ -1274,28 +1496,40 @@ a {
 	border: none;
 }
 
+.social-button {
+	opacity: 0.8;
+}
+
+.social-button:hover {
+	opacity: 1;
+}
+
+.social-button:active {
+	opacity: 0.7;
+}
+
 .social-tw {
 	background-image: url("../img/tw.svg");
 	background-repeat: no-repeat;
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 }
 
 .social-ig {
 	background-image: url("../img/ig.svg");
 	background-repeat: no-repeat;
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 }
 
 .social-fb {
 	background-image: url("../img/fb.svg");
 	background-repeat: no-repeat;
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 }
 
 .social-vk {
 	background-image: url("../img/vk.svg");
 	background-repeat: no-repeat;
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 }
 
 .documentation-list {
@@ -1342,11 +1576,16 @@ a {
 	color: #fefefe;
 }
 
-.footer-copyright::before {
+.footer-copyright a:hover {
+	color: #ffbc9e;
+}
+
+.footer-copyright a::before {
 	content: "";
 
 	position: absolute;
 	top: -40px;
+	left: 0px;
 	width: 108px;
 	height: 39px;
 

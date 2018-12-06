@@ -7,15 +7,19 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
+		<input class="visually-hidden" type="radio" id="product-1" name="toggle" aria-label="Смена цвета фона сайта" checked>
+		<input class="visually-hidden" type="radio" id="product-2" name="toggle" aria-label="Смена цвета фона сайта">
+		<input class="visually-hidden" type="radio" id="product-3" name="toggle" aria-label="Смена цвета фона сайта">
+		<div class="background-changer">
 		<div class="wrapper">
 			<header class="main-header">
 				<nav class="main-navigation">
 					<a class="main-header-logo">
 						<img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного «Глейси»">
 					</a>
-					<ul class="site-navigation">
+					<ul class="site-navigation" aria-label="Навигация по разделам сайта">
 						<li class="navigation-item">
-							<a href="catalog.html">Каталог</a>
+							<a href="#">Каталог</a>
 							<ul class="dropdown site-navigation-submenu">
 								<li class="navigation-submenu-item">
 									<a href="#">Новинки</a>
@@ -92,12 +96,33 @@
 					<p>8 812 450-25-25</p>
 				</section>
 			</header>
-			<main>
+			<main class="main-content">
 				<div class="marketing-campaign-slider">
-					<!-- Здесь будет слайдер -->
-					<img src="img/creme-brulee-n-raspberry-jam-slider.png" width="1045" height="860" alt="Крем-брюле и пломбир с малиновым джемом">
-					<img src="img/choco-icecream-n-lemon-sorbet-slider.png" width="1045" height="860" alt="Шоколадный пломбир и лимонный сорбет">
-					<img src="img/fondant-icecream-n-strawberry-sorbet-slider.png" width="1045" height="860" alt="Пломбир с помадкой и клубничный щербет">
+					<div class="slider-controls">
+						<label for="product-1"></label>
+						<label for="product-2"></label>
+						<label for="product-3"></label>
+					</div>
+					<ul class="slider-list">
+						<li class="slider-item slide" id="slide1">
+							<h3 class="slide-title">
+								Крем-брюле и пломбир с малиновым джемом
+							</h3>
+							<a class="button slide-button" href="#">Давайте оба!</a>
+						</li>
+						<li class="slider-item slide" id="slide2">
+							<h3 class="slide-title">
+								Шоколадный пломбир и лимонный сорбет
+							</h3>
+							<a class="button slide-button" href="#">Давайте оба!</a>
+						</li>
+						<li class="slider-item slide" id="slide3">
+							<h3 class="slide-title">
+								Пломбир с помадкой и клубничный щербет
+							</h3>
+							<a class="button slide-button" href="#">Давайте оба!</a>
+						</li>
+					</ul>
 				</div>
 				<section class="marketing-campaign">
 					<ul class="marketing-campaign-list">
@@ -121,7 +146,7 @@
 					<h2 class="visually-hidden">Самые продаваемые виды мороженного</h2>
 					<ul class="catalog-list">
 						<li class="catalog-item">
-							<a href="catalog-item.html">
+							<a href="#">
 								<h3>
                 					<span class="catalog-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               					</h3>
@@ -136,7 +161,7 @@
 							<button class="button">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
-							<a href="catalog-item.html">
+							<a href="#">
 								<h3>
 									<span class="catalog-item-title">Сливочно-кофейное с кусочками шоколада</span>
 								</h3>
@@ -151,7 +176,7 @@
 							<button class="button">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
-							<a href="catalog-item.html">
+							<a href="#">
 								<h3>
 									<span class="catalog-item-title">Сливочно-клубничное с присыпкой из белого шоколада</span>
 								</h3>
@@ -166,7 +191,7 @@
 							<button class="button">Быстрый просмотр</button>
 						</li>
 						<li class="catalog-item">
-							<a href="catalog-item.html">
+							<a href="#">
 								<h3>
 									<span class="catalog-item-title">Сливочное крем-брюле с карамельной подливкой</span>
 								</h3>
@@ -283,6 +308,7 @@
       				Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2018
       			</p>
 			</footer>
+		</div>
 		</div>
 	</body>
 </html>
