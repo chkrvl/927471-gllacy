@@ -686,18 +686,18 @@ a {
 	transition: background-image 1s ease, background-color 0.5s ease;
 }
 
-.site-wrapper::before,
-.site-wrapper::after {
+.background-changer::before,
+.background-changer::after {
   content: "";
 
   visibility: hidden;
 }
 
-.site-wrapper::before {
+.background-changer::before {
   background-image: url("../img/choco-icecream-n-lemon-sorbet-slider.png");
 }
 
-.site-wrapper::after {
+.background-changer::after {
   background-image: url("../img/fondant-icecream-n-strawberry-sorbet-slider.png");
 }
 
