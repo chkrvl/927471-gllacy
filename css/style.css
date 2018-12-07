@@ -186,7 +186,7 @@ a {
 
 /*Разобраться, как сделать выпадение подменю по фокусу на пункте меню */
 .navigation-item:hover .site-navigation-submenu,
-.navigation-item:focus ~ .site-navigation-submenu,
+.navigation-item a:focus ~ .site-navigation-submenu,
 .navigation-item ~ .site-navigation-submenu:hover {
 	display: block;
 }
@@ -305,6 +305,13 @@ a {
 	fill: #323232;
 }
 
+.nav-button:focus {
+	outline: none;
+	box-shadow: 
+	/*0 0 0 3px #fff,*/
+	0 0 0 3px #2f7cc0;
+}
+
 .user-navigation .nav-button {
 	padding: 8.5px 15px 8.5px 45px;
 	margin-right: 10px;
@@ -382,6 +389,7 @@ a {
 	position: relative;
 }
 
+/*Разобраться, как сделать перебор полей ввода в кабинете tabом после фокуса на кнопку Вход*/
 .nav-button:hover ~ .customer-login,
 .nav-button:focus-within ~ .customer-login,
 .nav-button ~ .customer-login:hover {
@@ -442,6 +450,13 @@ a {
 .button:active {
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
 	box-shadow: inset 0px 2px 2px 0 #942718;
+}
+
+.button:focus {
+	outline: none;
+	box-shadow: 
+	0 0 0 3px #fff,
+	0 0 0 6px #2f7cc0;
 }
 
 .login-form button {
