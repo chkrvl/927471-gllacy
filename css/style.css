@@ -1411,8 +1411,14 @@ a {
 }
 
 .pagination-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	margin: 0;
+	margin-bottom: 30px;
 	padding: 0;
+
+	position: relative;
 
 	font-size: 16px;
 	line-height: 18px;
@@ -1420,42 +1426,69 @@ a {
 	color: #323232;
 }
 
+.pagination-list li:first-of-type {
+	margin-left: auto;
+}
+
+.pagination-list a {
+	display: inline-block;
+	box-sizing: border-box;
+	min-width: 27px;
+	height: 26px;
+	padding: 5px;
+
+	vertical-align: middle;
+	text-align: center;
+}
+
+.prev-page,
+.next-page {
+
+}
+
+.disabled {
+	opacity: 0.2;
+}
+
 .pagination-list a {
 	color: #ffffff;
 	border: none;
 }
 
-.pagination-list a:hover {
-	display: inline-block;
-	width: 27px;
-	height: 27px;
-
-	text-align: center;
-	/*vertical-align: middle;*/
-
+.pagination-list li:hover:not(.pagination-current):not(.disabled) {
 	background-color: rgba(255,255,255,0.2);
+	border-radius: 50%;
+}
+
+.pagination-current {
+	display: inline-block;
+	box-sizing: border-box;
+	min-width: 27px;
+	height: 26px;
+	padding: 5px;
+
+	vertical-align: middle;
+	text-align: center;
+
+	background-color: rgba(255,255,255, 1);
 	border-radius: 50%;
 }
 
 .pagination-list a:active {
 	color: #323232;
-
-	background-color: #ffffff;
 }
 
-.pagination-current {
-	width: 27px;
-	height: 27px;
-	
-	text-align: center;
-	/*vertical-align: middle;*/
-
-	background-color: #ffffff;
+.pagination-list a:active {
+	background-color: rgba(255,255,255, 1);
 	border-radius: 50%;
 }
 
 .pagination-list::after { /*Разделитель перед футером в catalog*/
 	content: "";
+
+	position: absolute;
+	bottom: -30px;
+
 	width: 1146px;
 	height: 1px;
 	opacity: 0.3;
