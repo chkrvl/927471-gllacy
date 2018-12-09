@@ -176,7 +176,7 @@
 				<h2 class="visually-hidden">Фильтры для каталога мороженного</h2>
 				<form class="catalog-filter-form" name="catalog-filter-form" action="https://echo.htmlacademy.ru" method="get">
 					<ul class="catalog-filter-list">
-						<li>
+						<li class="sort-type-filter">
 							<h3>
 								<label for="sort-type">Сортировка:</label>
 							</h3>
@@ -187,38 +187,44 @@
 								<option>по жирности</option>
 							</select>
 						</li>
-						<li>
+						<li class="price-filter">
 							<h3>
 								<label for="price-range">Цена:</label>
 							</h3>
-							<span>100 руб. – 500 руб.</span>
-							<!-- Пока непонятно, как сделать фильтр с двумя бегунками для отображения диапазона цен-->
-							<input class="filter-item" type="range" name="price-range" id="price-range" min="100" max="500" step="10">
+							<span><output name="price-range-min">100</output> руб. – <output name="price-range-max">500</output> руб.</span>
+								<div class="range-controls">
+									<div class="scale">
+										<div class="bar"></div>
+									</div>
+									<div class="toggle toggle-min"></div>
+									<div class="toggle toggle-max"></div>
+								</div>
+							<!-- <input class="filter-item" type="range" name="price-range" id="price-range" min="100" max="500" step="10"> -->
 						</li>
-						<li>
+						<li class="fat-filter">
 							<h3>Жирность:</h3>
-							<div class="filter-item">
-							<label>
-								<input type="radio" name="fat-content" value="0">
-								0%
-							</label>
-							<label>
-								<input type="radio" name="fat-content" value="1-10" checked>
-								до 10%
-							</label>
-							<label>
-								<input type="radio" name="fat-content" value="11-30">
-								до 30%
-							</label>
-							<label>
-								<input type="radio" name="fat-content" value="30+">
-								выше 30%
-							</label>
-							</div>
+							<fieldset class="filter-item">
+								<label>
+									<input type="radio" name="fat-content" value="0">
+									0%
+								</label>
+								<label>
+									<input type="radio" name="fat-content" value="1-10" checked>
+									до 10%
+								</label>
+								<label>
+									<input type="radio" name="fat-content" value="11-30">
+									до 30%
+								</label>
+								<label>
+									<input type="radio" name="fat-content" value="30+">
+									выше 30%
+								</label>
+							</fieldset>
 						</li>
-						<li>
+						<li class="filler-filter">
 							<h3>Наполнители:</h3>
-								<div class="filter-item">
+								<fieldset class="filter-item">
 								<label>
 									<input type="checkbox" name="choco" checked="">
 									шоколадные
@@ -239,7 +245,7 @@
 									<input type="checkbox" name="jam">
 									джемы
 								</label>
-								</div>
+								</fieldset>
 						</li>
 					</ul>
 					<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>

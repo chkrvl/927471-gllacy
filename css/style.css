@@ -353,7 +353,7 @@ a {
 
 .nav-button:hover ~ .site-search,
 .nav-button:focus-within ~ .site-search,
-.nav-button .site-search:hover {
+.nav-button ~ .site-search:hover {
 	display: block;
 }
 
@@ -901,6 +901,10 @@ a {
 	line-height: 41px;
 }
 
+.catalog-filter-form {
+	display: flex;
+}
+
 .catalog-filter-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -908,12 +912,23 @@ a {
 	padding: 0;
 }
 
+.catalog-filter-list li {
+	display: flex;
+	flex-direction: column;
+
+	margin-right: 14px;
+}
+
 .catalog-filter-list h3 {
+	margin: 0;
+	margin-left: 10px;
+	margin-right: 5px;
+	padding: 0;
+
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 500;
 }
-
 .catalog-filter-form button[type="submit"] {
 	width: 144px;
 	height: 37px;
@@ -940,6 +955,109 @@ a {
 	border: none;
 	box-shadow: inset 0px 2px 1px 0 #696969;
 	background-color: #ededed;
+}
+
+
+.sort-type-filter .filter-item {
+	min-width: 194px;
+	height: 37px;
+	margin-top: 6px;
+
+	font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 25px;
+}
+
+
+
+.catalog-filter-list .price-filter {
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 220px;
+}
+
+.price-filter span {
+	margin-right: auto;
+
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.range-controls {
+	position: relative;
+
+	width: 176px;
+	height: 17px;
+	
+	margin-top: 6px;
+	margin-bottom: 18px;
+	padding-top: 15px;
+	padding-right: 22px;
+	padding-left: 22px;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+}
+
+.range-controls .scale {
+	position: relative;
+	height: 4px;
+
+	background: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+	position: absolute;
+	left: 16px;
+	width: 70%;
+	height: 4px;
+
+	background: rgba(248, 247, 244, 1);
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 8px;
+	left: 0;
+  
+  	width: 20px;
+  	height: 22px;
+	background-image: url("../img/filter-button.svg");
+	cursor: pointer;
+}
+
+.range-controls .toggle:hover {
+	width: 22px;
+	height: 25px;
+
+	background-image: url("../img/filter-button-hover.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.range-controls .toggle-min {
+  left: 30px;
+}
+
+.range-controls .toggle-max {
+  left: 150px;
+}
+
+.filter-item {
+	margin: 0;
+	padding: 0;
+	
+	line-height: 18px;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+	border: 0;
 }
 
 .catalog-list {
@@ -1266,10 +1384,23 @@ a {
 	position: relative;
 }
 
-.map { /* Сделать карту шире, чем .wrapper */
-	/*box-sizing: border-box;*/
-	/*width: 100%;*/
+.map {
+	position: relative;
+
 	margin: auto -25px;
+}
+
+.map img:first-child {
+	text-align: center;
+}
+
+.map-pin {
+	position: absolute;
+	top: 160px;
+	left: 330px;
+	/*Встроить пин в карту, иначе он остается при перемещении карты
+	или поставить статичную карту*/
+	box-shadow: 0 0 0 0 black;
 }
 
 .contacts-wrapper {
