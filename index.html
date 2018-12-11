@@ -5,6 +5,26 @@
 		<title>Магазин мороженного «Глейси»</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=deb53e4f-6fa3-4790-87c0-c07939ad22be&lang=ru_RU" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('interactive-map', {
+					center: [59.93963768, 30.32684753],
+					zoom: 16
+				}, {
+					searchControlProvider: 'yandex#search'
+				}),
+				myPlacemark = new ymaps.Placemark([59.93869332, 30.32309417], {}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/pin.svg',
+					iconImageSize: [80, 140],
+					iconImageOffset: [-37, -138]
+				});
+				myMap.geoObjects
+				.add(myPlacemark);
+			});
+		</script>
 	</head>
 	<body>
 		<input class="visually-hidden" type="radio" id="product-1" name="toggle" aria-label="Смена цвета фона сайта" checked>
@@ -245,10 +265,10 @@
 				</div>
 				<section class="store-contacts">
 					<h2 class="visually-hidden">Как до нас добраться</h2>
-					<div class="map">
-						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A662e78f5d56e79bc5f7c949b531c3f7b9ee4758b15d3de2a321c9b5dc1cf778c&amp;source=constructor" width="1200" height="430"></iframe>
+					<div class="map" id="interactive-map">
+						<!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A662e78f5d56e79bc5f7c949b531c3f7b9ee4758b15d3de2a321c9b5dc1cf778c&amp;source=constructor" width="1200" height="430"></iframe> -->
 						<!-- <img src="img/map.jpg" width="1302" height="430" alt="Большая Конюшенная 19/8 на карте Санкт-Петербурга"> -->
-						<img class="map-pin" src="img/pin.svg" width="80" height="140" alt="Большая Конюшенная 19/8 на карте Санкт-Петербурга">
+						<!-- <img class="map-pin" src="img/pin.svg" width="80" height="140" alt="Большая Конюшенная 19/8 на карте Санкт-Петербурга"> -->
 					</div>
 					<div class="contacts-wrapper">
 						<address>

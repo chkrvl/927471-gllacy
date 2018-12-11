@@ -1554,9 +1554,13 @@ img {
 	position: relative;
 
 	margin: auto -25px;
+
+	/*Для теста*/
+	width: 1200px;
+	height: 430px;
 }
 
-.map iframe {
+/*.map iframe {
 	border: none;
 }
 
@@ -1568,16 +1572,16 @@ img {
 	position: absolute;
 	top: 160px;
 	left: 330px;
-	/* https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/geoobjects-docpage/#geoobjects__icon-style
+	 https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/geoobjects-docpage/#geoobjects__icon-style
 	Встроить пин в карту, иначе он остается при перемещении карты
 
-	или поставить статичную карту*/
+	или поставить статичную карту
 
 	width: 80px;
 	height: 140px;
 
 	box-shadow: 0 0 0 0 black;
-}
+}*/
 
 .contacts-wrapper {
 	position: absolute;
@@ -1650,6 +1654,7 @@ img {
 
 	border-radius: 10px;
 	background-color: #f8f7f4;
+	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .modal-feedback h2 {
