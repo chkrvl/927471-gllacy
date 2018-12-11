@@ -397,7 +397,8 @@ img {
 }
 
 .search-bar input {
-	width: 100%;
+	/*Разобраться, почему при 100% в Сафари input не влезает в строку*/
+	width: 99.9%; 
 }
 
 .cabinet {
@@ -628,8 +629,6 @@ img {
 }
 
 .order-total-cost {
-	
-
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: 700;
@@ -1286,7 +1285,6 @@ img {
 
 .catalog-item-image:hover {
 	background-color: rgba(255, 255, 255, 0);
-	/*Найти способ убирать «старый» цвет рамки изображения при наведении */
 }
 
 .best-selling .catalog-item-image::after {
@@ -1294,6 +1292,7 @@ img {
 
 	position: absolute;
 	top: 0px;
+	left: 0px;
 
     width: 61px;
     height: 61px;
