@@ -945,7 +945,7 @@ img {
 }
 
 .catalog-filter-list li:last-of-type {
-	justify-content: flex-end;
+	justify-content: space-around;
 }
 
 .catalog-filter-list h3 {
@@ -1122,9 +1122,10 @@ img {
 
 .fat-filter .filter-item {
 	/*min-width: 415px;*/
+	min-height: 27px;
 	padding-left: 14px;
 	padding-top: 10px;
-	height: 27px;
+	margin-bottom: 18px;
 }
 
 .fat-filter label {
@@ -1178,9 +1179,10 @@ img {
 }
 
 .filler-filter .filter-item {
+	min-height: 27px;
 	padding-left: 16px;
 	padding-top: 10px;
-	height: 27px;
+	margin-bottom: 18px;
 }
 
 .filler-filter label {
