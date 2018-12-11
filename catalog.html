@@ -191,64 +191,69 @@
 							<h3>
 								<label for="price-range">Цена:</label>
 							</h3>
-							<span><output name="price-range-min">100</output> руб. – <output name="price-range-max">500</output> руб.</span>
-								<div class="range-controls">
-									<div class="scale">
-										<div class="bar"></div>
-									</div>
-									<div class="toggle toggle-min"></div>
-									<div class="toggle toggle-max"></div>
+							<span>
+								<output name="price-range-min">100</output>
+								 руб. – 
+								 <output name="price-range-max">500</output>
+								  руб.
+							</span>
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
 								</div>
+								<div class="toggle toggle-min"></div>
+								<div class="toggle toggle-max"></div>
+							</div>
 							<!-- <input class="filter-item" type="range" name="price-range" id="price-range" min="100" max="500" step="10"> -->
 						</li>
 						<li class="fat-filter">
 							<h3>Жирность:</h3>
 							<fieldset class="filter-item">
-								<label>
-									<input type="radio" name="fat-content" value="0">
+								<input class="visually-hidden" type="radio" name="fat-content" value="0" id="fat-content-0">
+								<label for="fat-content-0">
 									0%
 								</label>
-								<label>
-									<input type="radio" name="fat-content" value="1-10" checked>
+								<input class="visually-hidden" type="radio" name="fat-content" value="1-10" id="fat-content-1-10" checked>
+								<label for="fat-content-1-10">
 									до 10%
 								</label>
-								<label>
-									<input type="radio" name="fat-content" value="11-30">
+								<input class="visually-hidden" type="radio" name="fat-content" value="11-30" id="fat-content-11-30">
+								<label for="fat-content-11-30">
 									до 30%
 								</label>
-								<label>
-									<input type="radio" name="fat-content" value="30+">
+								<input class="visually-hidden" type="radio" name="fat-content" value="30+" id="fat-content-30+">
+								<label for="fat-content-30+">
 									выше 30%
 								</label>
 							</fieldset>
 						</li>
 						<li class="filler-filter">
 							<h3>Наполнители:</h3>
-								<fieldset class="filter-item">
-								<label>
-									<input type="checkbox" name="choco" checked="">
+							<fieldset class="filter-item">
+								<input class="visually-hidden" type="checkbox" name="choco" id="choco-filler" checked>
+								<label for="choco-filler">
 									шоколадные
 								</label>
-								<label>
-									<input type="checkbox" name="sugar" checked="">
+								<input class="visually-hidden" type="checkbox" name="sugar" id="sugar-filler" checked>
+								<label for="sugar-filler">
 									сахарные присыпки
 								</label>
-								<label>
-									<input type="checkbox" name="fruit">
+								<input class="visually-hidden" type="checkbox" name="fruit" id="fruit-filler">
+								<label for="fruit-filler">
 									фрукты
 								</label>
-								<label>
-									<input type="checkbox" name="syrop">
+								<input class="visually-hidden" type="checkbox" name="syrop" id="syrop-filler">
+								<label for="syrop-filler">
 									сиропы
 								</label>
-								<label>
-									<input type="checkbox" name="jam">
+								<input class="visually-hidden" type="checkbox" name="jam" id="jam-filler">
+								<label for="jam-filler">
 									джемы
 								</label>
-								</fieldset>
+							</fieldset>
 						</li>
+						<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>
 					</ul>
-					<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>
 				</form>
 			</section>
 			
@@ -439,8 +444,9 @@
 					</li>
 				</ul>
 			</section>
+
 			<ul class="pagination-list" aria-label="Навигация по страницам каталога мороженного">
-				<li class="prev-page disabled"><a href="#" aria-label="Предыдущая страница"><</a></li>
+				<li class="prev-page disabled"><a aria-label="Предыдущая страница"><</a></li>
 				<li class="pagination-current">1</li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
@@ -448,7 +454,9 @@
 				<li><a href="#">5</a></li>
 				<li class="next-page"><a href="#" aria-label="Cледующая страница">></a></li>
 			</ul>
+
 		</main>
+
 		<footer class="main-footer">
 			<div class="footer-social">
         		<ul>

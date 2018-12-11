@@ -49,10 +49,10 @@ a {
 	border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
-/*img {
+img {
 	width: 100%;
 	height: auto;
-}*/
+}
 
 .visually-hidden {
 	position: absolute;
@@ -71,6 +71,12 @@ a {
 	margin: 0 auto;
 	padding: 9px 27px 0;
 }
+
+/*.wrapper *:focus {
+	outline: none;
+	box-shadow: 
+	0 0 0 3px #2f7cc0;
+}*/
 
 .wrapper ul {
 	list-style-type: none;
@@ -326,15 +332,20 @@ a {
 	height: 44px;
 
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 700;
 	vertical-align: middle;
 	line-height: 24px;
 	padding-left: 15px;
-	color: #999999;
+	color: #323232;
 
 	background-color: #ffffff;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
+}
+
+.wrapper input:placeholder-shown {
+	font-weight: 400;
+	color: #999999;
 }
 
 .wrapper input:hover {
@@ -629,7 +640,7 @@ a {
 	content: "";
 	
 	position: absolute;
-	bottom: : 112px;
+	bottom: 112px;
 	left: 15px;
 	width: 510px;
 	height: 1px;
@@ -944,6 +955,8 @@ a {
 	font-weight: 500;
 }
 .catalog-filter-form button[type="submit"] {
+	align-self: flex-end;
+
 	width: 144px;
 	height: 37px;
 
@@ -971,23 +984,46 @@ a {
 	background-color: #ededed;
 }
 
+.catalog-filter-form button[type="submit"]:focus {
+	outline: none;
+	box-shadow: 
+	0 0 0 3px #2f7cc0;
+}
 
+/*Непонятно, как стилизовать выпадающую часть у select*/
 .sort-type-filter .filter-item {
+	-webkit-appearance: none;
+
+	-moz-appearance: none;
+	text-indent: 0.01px; 
+	text-overflow: '';
+
+	-ms-appearance: none;
+	appearance: none;
+
 	min-width: 194px;
 	height: 37px;
 	margin-top: 6px;
+	padding-left: 16px;
 
 	font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
 
+    background-image: url("../img/icon-down-dir.svg");
+    background-position: right 15px top 15px;
+    background-repeat: no-repeat;
+
 	background-color: rgba(255, 255, 255, 0.2);
 	border: none;
 	border-radius: 25px;
 }
 
-
+.sort-type-filter .filter-item:hover {
+	color: #323232;
+	background-image: url("../img/icon-down-dir-blck.svg");
+}
 
 .catalog-filter-list .price-filter {
 	flex-direction: row;
@@ -1007,11 +1043,11 @@ a {
 	position: relative;
 
 	width: 176px;
-	height: 17px;
+	height: 20px;
 	
 	margin-top: 6px;
 	margin-bottom: 18px;
-	padding-top: 15px;
+	padding-top: 17px;
 	padding-right: 22px;
 	padding-left: 22px;
 
@@ -1037,7 +1073,7 @@ a {
 
 .range-controls .toggle {
 	position: absolute;
-	top: 8px;
+	top: 9px;
 	left: 0;
   
   	width: 20px;
@@ -1047,12 +1083,13 @@ a {
 }
 
 .range-controls .toggle:hover {
-	width: 22px;
+	transform: scale(1.1);
+	/*width: 22px;
 	height: 25px;
 
 	background-image: url("../img/filter-button-hover.svg");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: contain;*/
 }
 
 .range-controls .toggle-min {
@@ -1076,21 +1113,111 @@ a {
 }
 
 .fat-filter .filter-item {
+	/*min-width: 415px;*/
 	padding-left: 14px;
+	padding-top: 10px;
+	height: 27px;
 }
 
 .fat-filter label {
+	position: relative;
+
 	margin-right: 17px;
+	margin-left: 28px;
+}
+
+.fat-filter label::before {
+	content: "";
+
+    position: absolute;
+    left: -30px;
+    top: -2px;
+
+    width: 10px;
+    height: 10px;
+    padding: 3px;
+
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    background-clip: content-box;
+    cursor: pointer;
+}
+
+.fat-filter label:hover::before {
+	border-color: rgba(255, 255, 255, 1);
+}
+
+.fat-filter input[type="radio"]:checked + label::before {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fat-filter input[type="radio"]:checked:not(:disabled) + label:hover::before {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.fat-filter input[type="radio"]:disabled + label::before {
+	border-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.fat-filter input[type="radio"]:focus + label {
+	/*border-color: #663d15;
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;*/
+	outline: none;
+	box-shadow: 
+	0 0 0 3px #2f7cc0;
 }
 
 .filler-filter .filter-item {
 	padding-left: 16px;
+	padding-top: 10px;
+	height: 27px;
 }
 
 .filler-filter label {
+	position: relative;
+
 	margin-right: 20px;
+	margin-left: 32px;
 }
 
+.filler-filter label::before {
+	content: "";
+
+    position: absolute;
+    left: -30px;
+    top: -2px;
+
+    width: 26px;
+    height: 23px;
+	
+	background-image: url("../img/checkbox-off.svg");
+	background-repeat: no-repeat;
+	opacity: 0.8;
+    cursor: pointer;
+}
+
+.filler-filter label:hover::before {
+	opacity: 1;
+}
+
+.filler-filter input[type="checkbox"]:checked + label::before {
+	background-image: url("../img/checkbox-on.svg");
+}
+
+.filler-filter input[type="checkbox"]:disabled + label::before {
+	opacity: 0.4;
+}
+
+.filler-filter input[type="checkbox"]:focus + label {
+	/*border-color: #663d15;
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;*/
+	outline: none;
+	box-shadow: 
+	0 0 0 3px #2f7cc0;
+}
 
 .catalog-list {
 	display: flex;
@@ -1427,8 +1554,14 @@ a {
 	position: absolute;
 	top: 160px;
 	left: 330px;
-	/*Встроить пин в карту, иначе он остается при перемещении карты
+	/* https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/geoobjects-docpage/#geoobjects__icon-style
+	Встроить пин в карту, иначе он остается при перемещении карты
+
 	или поставить статичную карту*/
+
+	width: 80px;
+	height: 140px;
+
 	box-shadow: 0 0 0 0 black;
 }
 
@@ -1530,11 +1663,10 @@ a {
 	margin-bottom: 20px;
 }
 
-/*.feedback-form input:focus:valid {
-	color: #323232;
-	font-weight: bold;
-}*/
-/*Разобраться как менять шрифт после ввода данных*/
+.feedback-form input:placeholder-shown {
+	color: #999999;
+	font-weight: 400;
+}
 
 .feedback-form textarea {
 	box-sizing: border-box;
@@ -1543,9 +1675,9 @@ a {
 
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 24px;
-	color: #999999;
+	color: #323232;
 	text-align: left;
 	padding-left: 15px;
 	padding-top: 13px;
@@ -1554,6 +1686,11 @@ a {
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 	resize: none;
+}
+
+.feedback-form textarea:placeholder-shown {
+	font-weight: 400;
+	color: #999999;
 }
 
 .feedback-form textarea:hover {
