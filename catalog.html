@@ -189,7 +189,7 @@
 						</li>
 						<li class="price-filter">
 							<h3>
-								<label for="price-range">Цена:</label>
+								<label>Цена:</label><!-- for="price-range" -->
 							</h3>
 							<span>
 								<output name="price-range-min">100</output>
@@ -252,7 +252,9 @@
 								</label>
 							</fieldset>
 						</li>
-						<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>
+						<li>
+							<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>
+						</li>
 					</ul>
 				</form>
 			</section>
@@ -446,7 +448,7 @@
 			</section>
 
 			<ul class="pagination-list" aria-label="Навигация по страницам каталога мороженного">
-				<li class="prev-page disabled"><a aria-label="Предыдущая страница"><</a></li>
+				<li class="prev-page disabled"><a aria-label="Предыдущая страница">&lt;</a></li>
 				<li class="pagination-current">1</li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
