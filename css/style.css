@@ -1247,9 +1247,18 @@ img {
     padding: 6px 14px 0;
     margin: 0;
     margin-bottom: 34px;
+    /*тест*/
+    padding-bottom: 75px;
+    margin-top: -75px;
+}
+
+.catalog-item:nth-child(-n+4) {
+	margin-top: 0px;
 }
 
 .catalog-item:hover {
+		z-index: 1;
+
 	background-color: rgba(255, 255, 255, 0.2);
 	background-size: 400px 50px;
 }
@@ -1368,7 +1377,7 @@ img {
 	box-sizing: border-box;
 	width: 1146px;
 	height: 306px;
-	/*margin-top: 40px;*/
+	margin-top: -75px;
 	margin-bottom: 40px;
 	padding-top: 30px;
 	padding-bottom: 25px;
