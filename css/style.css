@@ -108,7 +108,7 @@ img {
 .main-header-logo {
 	width: 154px;
 	height: 64px;
-	margin-right: 24px;
+	margin-right: 10px;
 
 	border: none;
 }
@@ -120,14 +120,18 @@ img {
 	margin: 0;
 	margin-right: auto;
 	padding: 0;
+	padding-bottom: 5px;
 	
 	line-height: 18px;
 	font-weight: bold;
 }
 
 .navigation-item {
-	margin-right: 5px;
-	padding: 8px 13px;
+	margin-right: 2px;
+	padding-top: 7px;
+	padding-bottom: 6px;
+	padding-left: 13px;
+	padding-right: 12px;
 }
 
 .navigation-item:hover {
@@ -199,12 +203,12 @@ img {
 
 .site-navigation-submenu {
 	top: 37px;
-	left: -20px;
+	left: -7px;
 
 	box-sizing: border-box;
 	min-width: 143px;
-	padding: 10px 0;
-	z-index: 20;
+	padding: 5px 0px 4px 0px;
+	z-index: 2;
 
 	font-weight: 400;
 	font-size: 14px;
@@ -222,6 +226,7 @@ img {
 	height: 28px;
 	padding-left: 20px;
 	padding-top: 3px;
+	margin-bottom: 3px;
 	
 	vertical-align: middle;
 	color: #323232;
@@ -279,6 +284,7 @@ img {
 	align-items: center;
 	width: 245px;
 	margin-left: auto;
+	padding-bottom: 5px;
 }
 
 .nav-button {
@@ -319,7 +325,7 @@ img {
 }
 
 .user-navigation .nav-button {
-	padding: 8.5px 15px 8.5px 45px;
+	padding: 8px 16px 8.5px 44px;
 	margin-right: 10px;
 }
 
@@ -422,7 +428,8 @@ img {
 	height: 19px;
 
 	position: absolute;
-	left: 17px;
+	left: 16px;
+    top: 7px;
 }
 
 .customer-login {
@@ -681,7 +688,7 @@ img {
 }
 
 .working-hours p:last-child {
-	margin-top: 5px;
+	margin-top: 4px;
 
 	font-size: 22px;
 	font-weight: 700;
@@ -726,7 +733,7 @@ img {
 
 .marketing-campaign-slider {
 	text-align: center;
-	padding-top: 284px;
+	padding-top: 276px;
 	margin-bottom: 40px;
 }
 
@@ -744,20 +751,26 @@ img {
 .slide-title {
 	width: 700px;
 	margin: 0 auto;
+	margin-left: 228px;
 	margin-bottom: 26px;
 
 	font-size: 60px;
 	line-height: 60px;
 	font-weight: 700;
+	letter-spacing: -1px;
 }
 
 .slide-button {
 	display: inline-block;
-	padding: 12px 42px;
+	padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 41px;
+    padding-right: 40px;
 
-	font-size: 32px;
-	line-height: 44px;
-	font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    letter-spacing: -1px;
 	vertical-align: top;
 	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 	text-decoration: none;
@@ -770,7 +783,7 @@ img {
 
 .slider-controls {
   position: absolute;
-  top: 450px;
+  top: 446px;
   left: 0;
   z-index: 20;
   
@@ -842,26 +855,27 @@ img {
 .marketing-campaign-preview {
 	display: flex;
 	flex-direction: column;
-	height: 229px;
+	/*height: 206px;*/
 	padding-bottom: 23px;
 }
 
 .marketing-campaign-preview h2,
 .marketing-campaign-preview p {
 	margin: 0;
-	margin-left: 20px;
+	margin-left: 18px;
+	letter-spacing: -0.5px;
 }
 
 .marketing-campaign-preview h2 {
-	margin-top: 23px;
+	margin-top: 25px;
 	font-size: 35px;
 }
 
 .marketing-campaign-preview p {
 	width: 510px;
-	margin-top: 20px;
+	margin-top: 25px;
 
-	letter-spacing: -1px;
+	letter-spacing: -0.6px;
 }
 
 .marketing-campaign-list li:first-child {
@@ -883,11 +897,10 @@ img {
 
 .marketing-campaign-preview .button {
 	box-sizing: border-box;
-	height: 45px;
 	align-self: flex-end;
-	margin-top: auto;
+	margin-top: 44px;
 	margin-right: 21px;
-	padding: 10px 22px 0 22px;
+	padding: 10px 17px 12px 20px;
 	
 	font-size: 18px;
 	line-height: 24px;
@@ -897,6 +910,7 @@ img {
 	display: flex;
 	padding: 0;
 	margin: 0;
+	margin-top: -19px;
 
 	font-size: 14px;
 	line-height: 16px;
@@ -917,7 +931,7 @@ img {
 }
 
 .page-title {
-	margin-top: 10px;
+	margin-top: 5px;
 
 	font-size: 35px;
 	font-weight: 700;
@@ -1180,6 +1194,7 @@ img {
 .filler-filter .filter-item {
 	min-height: 27px;
 	padding-left: 16px;
+	padding-right: 5px;
 	padding-top: 10px;
 	margin-bottom: 18px;
 }
@@ -1233,9 +1248,12 @@ img {
 	justify-content: space-between;
 	align-content: space-between;
 	flex-wrap: wrap;
+
 	padding: 0;
-	margin: 0 -28px;
-	margin-top: 34px;
+	margin-bottom: 0px;
+	margin-top: 15px;
+	margin-right: -14px;
+	margin-left: -12px;
 }
 
 .catalog-item {
@@ -1244,11 +1262,14 @@ img {
 	position: relative;
 
     border-radius: 5px;
-    padding: 6px 14px 0;
+    padding-top: 6px;
+    padding-bottom: 75px;
+	padding-right: 15px;
+	padding-left: 11px;
     margin: 0;
     margin-bottom: 34px;
     /*тест*/
-    padding-bottom: 75px;
+
     margin-top: -75px;
 }
 
@@ -1284,6 +1305,7 @@ img {
 	width: 267px;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 7px;
 
 	background-color: transparent;
 }
@@ -1334,7 +1356,7 @@ img {
 
 .catalog-item-price {
 	position: absolute;
-	top: 200px;
+	top: 215px;
 	
 	margin: 0;
 
@@ -1377,9 +1399,9 @@ img {
 	box-sizing: border-box;
 	width: 1146px;
 	height: 306px;
-	margin-top: -75px;
+	margin-top: -71px;
 	margin-bottom: 40px;
-	padding-top: 30px;
+	padding-top: 25px;
 	padding-bottom: 25px;
 	padding-right: 20px;
 
@@ -1395,7 +1417,7 @@ img {
 .features h1 {
 	margin: 0;
 	margin-left: 20px;
-	margin-bottom: 26px;
+	margin-bottom: 20px;
 
 	font-size: 24px;
 	font-weight: 500;
@@ -1416,8 +1438,8 @@ img {
 	content: "";
 
 	position: absolute;
-	top: -16px;
-	left: -57px;
+	top: -12px;
+	left: -56px;
 	width: 49px;
 	height: 49px;
 
@@ -1428,7 +1450,7 @@ img {
 	content: "";
 
 	position: absolute;
-	top: -16px;
+	top: -13px;
 	left: -57px;
 	width: 49px;
 	height: 49px;
@@ -1440,8 +1462,8 @@ img {
 	content: "";
 
 	position: absolute;
-	top: -16px;
-	left: -57px;
+	top: -13px;
+	left: -56px;
 	width: 49px;
 	height: 49px;
 
@@ -1452,7 +1474,7 @@ img {
 	content: "";
 
 	position: absolute;
-	top: -16px;
+	top: -13px;
 	left: -57px;
 	width: 49px;
 	height: 49px;
@@ -1467,7 +1489,7 @@ img {
 
 .features-item p {
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 23px;
 	padding: 0;
 }
 
@@ -1495,7 +1517,7 @@ img {
 }
 
 .blog-preview p {
-	margin: 26px 0 0 20px;
+	margin: 23px 0 0 20px;
 
 	font-size: 16px;
 	font-weight: 500;
@@ -1504,8 +1526,7 @@ img {
 .blog-preview h2 {
 	order: 1;
 	width: 295px;
-	margin: 0;
-	margin: 13px 0 0 20px;
+	margin: 4px 0 0 19px;
 
 	font-size: 24px;
 	font-weight: 700;
@@ -1538,20 +1559,25 @@ img {
 }
 
 .subscribe-wrapper p {
-	padding: 33px 22px 0;
+	padding: 29px 22px 0;
 	margin: 0;
 }
 
 .mail-distribution-form {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 38px;
-	padding: 0 22px 0 22px;
+	margin-top: 36px;
+	padding: 0 22px 0 21px;
 }
 
 .mail-distribution-form input {
-	margin-right: 10px;
+	margin-right: 13px;
 	flex-grow: 1;
+}
+
+.mail-distribution-form button {
+	line-height: 24px;
+	padding: 0 13px 4px 16px;
 }
 
 .store-contacts {
@@ -1561,11 +1587,10 @@ img {
 .map {
 	position: relative;
 
-	margin: auto -25px;
-
-	/*Для теста*/
 	width: 1200px;
 	height: 430px;
+
+	margin: auto -27px;
 }
 
 /*.map iframe {
@@ -1594,12 +1619,12 @@ img {
 .contacts-wrapper {
 	position: absolute;
 	top: 63px;
-	right: 27px;
+	right: 0px;
 
 	box-sizing: border-box;
 	width: 302px;
 	height: 305px;
-	padding-top: 30px;
+	padding-top: 27px;
 	padding-left: 25px;
 
 	
@@ -1630,24 +1655,26 @@ img {
 }
 
 .contacts-wrapper p:nth-of-type(2) {
-	margin-top: 5px;
+	margin-top: 2px;
 }
 
 .contacts-wrapper p:nth-of-type(3) {
-	margin-top: 20px;
+	margin-top: 17px;
 }
 
 .contacts-wrapper span {
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 5px;
 
 	vertical-align: middle;
 }
 
 .contacts-wrapper .button {
-	width: 252px;
-	height: 44px;
-	margin-top: 25px;
+	/*width: 252px;
+	height: 44px;*/
+	margin-top: 26px;
+	padding: 9px 17px 10px 28px;
+
 	line-height: 24px;
 }
 
@@ -1758,6 +1785,7 @@ img {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0;
+	margin-top: -33px;
 	margin-bottom: 30px;
 	padding: 0;
 
@@ -1846,21 +1874,23 @@ img {
 
 .main-footer {
 	display: flex;
-	height: 103px;
+	padding-top: 35px;
 	justify-content: space-between;
-	align-items: flex-end;
+	/*align-items: flex-end;*/
 }
 
 .main-footer ul,
 .main-footer > p {
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 }
 
-.footer-social ul {
+.footer-social {
 	display: flex;
-	width: 194px;
 	justify-content: space-between;
+
+	width: 186px;
 	padding: 0;
+	margin-top: 0;
 }
 
 .footer-social li {
@@ -1902,28 +1932,27 @@ img {
 .social-tw {
 	background-image: url("../img/tw.svg");
 	background-repeat: no-repeat;
-	/*opacity: 0.8;*/
 }
 
 .social-ig {
 	background-image: url("../img/ig.svg");
 	background-repeat: no-repeat;
-	/*opacity: 0.8;*/
 }
 
 .social-fb {
 	background-image: url("../img/fb.svg");
 	background-repeat: no-repeat;
-	/*opacity: 0.8;*/
 }
 
 .social-vk {
 	background-image: url("../img/vk.svg");
 	background-repeat: no-repeat;
-	/*opacity: 0.8;*/
 }
 
 .documentation-list {
+	margin-top: 0;
+	padding-left: 30px;
+
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 18px;
@@ -1961,6 +1990,7 @@ img {
 	position: relative;
 
 	margin: 0;
+	margin-top: 25px;
 
 	font-size: 12px;
 	line-height: 18px;
@@ -1979,8 +2009,8 @@ img {
 	content: "";
 
 	position: absolute;
-	top: -40px;
-	left: 0px;
+	top: -43px;
+	left: 2px;
 	width: 108px;
 	height: 39px;
 

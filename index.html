@@ -127,7 +127,7 @@
 					</ul>
 				</div>
 				<section class="marketing-campaign">
-					<ul class="marketing-campaign-list">
+					<ul class="marketing-campaign-list" aria-label="Маркетинговые кампании">
 						<li class="half-width marketing-campaign-preview">
 							<a href="#">
 								<h2>Малинка даром!</h2>
@@ -283,23 +283,21 @@
 				</section>
 			</main>
 			<footer class="main-footer">
-				<div class="footer-social">
-        			<ul>
-        				<li>
-        					<a class="social-button social-tw" href="#">«Глейси» в Твиттере</a>
-        				</li>
-        				<li>
-        					<a class="social-button social-ig" href="#">«Глейси» в Инстаграме</a>
-        				</li>
-        				<li>
-        					<a class="social-button social-fb" href="#">«Глейси» в Фейсбуке</a>
-        				</li>
-        				<li>
-        					<a class="social-button social-vk" href="#">«Глейси» Вконтакте</a>
-        				</li>
-					</ul>
-      			</div>
-      			<section class="documentation">
+				<ul class="footer-social">
+					<li>
+						<a class="social-button social-tw" href="#">«Глейси» в Твиттере</a>
+					</li>
+					<li>
+						<a class="social-button social-ig" href="#">«Глейси» в Инстаграме</a>
+					</li>
+					<li>
+						<a class="social-button social-fb" href="#">«Глейси» в Фейсбуке</a>
+					</li>
+					<li>
+						<a class="social-button social-vk" href="#">«Глейси» Вконтакте</a>
+					</li>
+				</ul>
+				<section class="documentation">
       				<h3 class="visually-hidden">Документация</h3>
       				<ul class="documentation-list">
       					<li><a href="#">Для поставщиков</a></li>	
@@ -314,10 +312,11 @@
 			</footer>
 		</div>
 		</div>
+		<!-- 59.93940627, 30.32951326 -->
 		<script type="text/javascript">
 			ymaps.ready(function () {
 				var myMap = new ymaps.Map('interactive-map', {
-					center: [59.93963768, 30.32684753],
+					center: [59.93940627, 30.32951326],
 					zoom: 16
 				}, {
 					searchControlProvider: 'yandex#search'
