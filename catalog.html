@@ -208,7 +208,7 @@
 						</li>
 						<li class="fat-filter">
 							<h3>Жирность:</h3>
-							<fieldset class="filter-item">
+							<div class="filter-item"> <!-- Почему-то при использовании вместо div тега fieldset возникает проблема с отображением в Хроме со свойством display:flex или в Сафари — без него -->
 								<input class="visually-hidden" type="radio" name="fat-content" value="0" id="fat-content-0">
 								<label for="fat-content-0">
 									0%
@@ -225,11 +225,11 @@
 								<label for="fat-content-30+">
 									выше 30%
 								</label>
-							</fieldset>
+							</div>
 						</li>
 						<li class="filler-filter">
 							<h3>Наполнители:</h3>
-							<fieldset class="filter-item">
+							<div class="filter-item"> <!-- Почему-то при использовании тега fieldset возникает проблема с отображением в Хроме со свойством display:flex или в Сафари — без него -->
 								<input class="visually-hidden" type="checkbox" name="choco" id="choco-filler" checked>
 								<label for="choco-filler">
 									шоколадные
@@ -250,7 +250,7 @@
 								<label for="jam-filler">
 									джемы
 								</label>
-							</fieldset>
+							</div>
 						</li>
 						<li>
 							<button type="submit" aria-label="Применить выбранные фильтры">Применить</button>

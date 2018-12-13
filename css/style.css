@@ -253,10 +253,6 @@ img {
 	background-color: rgba(137, 150, 166, 0.2);
 }
 
-.navigation-submenu-item {
-	/*height: 28px;*/
-}
-
 .navigation-submenu-item:hover:not(.navigation-submenu-item-current):not(:first-of-type) {
 	background-color: #fbded7;
 }
@@ -320,7 +316,6 @@ img {
 .nav-button:focus {
 	outline: none;
 	box-shadow: 
-	/*0 0 0 3px #fff,*/
 	0 0 0 3px #2f7cc0;
 }
 
@@ -855,7 +850,6 @@ img {
 .marketing-campaign-preview {
 	display: flex;
 	flex-direction: column;
-	/*height: 206px;*/
 	padding-bottom: 23px;
 }
 
@@ -1007,7 +1001,6 @@ img {
 	0 0 0 3px #2f7cc0;
 }
 
-/*Непонятно, как стилизовать выпадающую часть у select*/
 .sort-type-filter .filter-item {
 	-webkit-appearance: none;
 
@@ -1105,12 +1098,6 @@ img {
 
 .range-controls .toggle:hover {
 	transform: scale(1.1);
-	/*width: 22px;
-	height: 25px;
-
-	background-image: url("../img/filter-button-hover.svg");
-	background-repeat: no-repeat;
-	background-size: contain;*/
 }
 
 .range-controls .toggle-min {
@@ -1135,6 +1122,8 @@ img {
 
 .fat-filter .filter-item {
 	/*min-width: 415px;*/
+	display: flex;
+	
 	min-height: 27px;
 	padding-left: 14px;
 	padding-top: 10px;
@@ -1192,6 +1181,8 @@ img {
 }
 
 .filler-filter .filter-item {
+	display: flex;
+
 	min-height: 27px;
 	padding-left: 16px;
 	padding-right: 5px;
@@ -1261,16 +1252,15 @@ img {
 	
 	position: relative;
 
-    border-radius: 5px;
     padding-top: 6px;
     padding-bottom: 75px;
 	padding-right: 15px;
 	padding-left: 11px;
     margin: 0;
     margin-bottom: 34px;
-    /*тест*/
-
     margin-top: -75px;
+
+    border-radius: 5px;
 }
 
 .catalog-item:nth-child(-n+4) {
@@ -1278,7 +1268,7 @@ img {
 }
 
 .catalog-item:hover {
-		z-index: 1;
+	z-index: 1;
 
 	background-color: rgba(255, 255, 255, 0.2);
 	background-size: 400px 50px;
@@ -1543,7 +1533,6 @@ img {
 	display: flex;
 	height: 220px;
 
-	/*font-size: 16px;*/
 	color: #5a5a5a;
 
 	background-image: url("../img/mail-bg.svg");
@@ -1592,29 +1581,6 @@ img {
 
 	margin: auto -27px;
 }
-
-/*.map iframe {
-	border: none;
-}
-
-.map img:first-child {
-	text-align: center;
-}
-
-.map-pin {
-	position: absolute;
-	top: 160px;
-	left: 330px;
-	 https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/geoobjects-docpage/#geoobjects__icon-style
-	Встроить пин в карту, иначе он остается при перемещении карты
-
-	или поставить статичную карту
-
-	width: 80px;
-	height: 140px;
-
-	box-shadow: 0 0 0 0 black;
-}*/
 
 .contacts-wrapper {
 	position: absolute;
@@ -1670,8 +1636,6 @@ img {
 }
 
 .contacts-wrapper .button {
-	/*width: 252px;
-	height: 44px;*/
 	margin-top: 26px;
 	padding: 9px 17px 10px 28px;
 
