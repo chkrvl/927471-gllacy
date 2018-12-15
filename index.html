@@ -5,7 +5,7 @@
 		<title>Магазин мороженного «Глейси»</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="https://api-maps.yandex.ru/2.1/?apikey=deb53e4f-6fa3-4790-87c0-c07939ad22be&lang=ru_RU" type="text/javascript">
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=deb53e4f-6fa3-4790-87c0-c07939ad22be&lang=ru_RU">
 		</script>
 	</head>
 	<body>
@@ -312,24 +312,6 @@
 			</footer>
 		</div>
 		</div>
-		<!-- 59.93940627, 30.32951326 -->
-		<script type="text/javascript">
-			ymaps.ready(function () {
-				var myMap = new ymaps.Map('interactive-map', {
-					center: [59.93940627, 30.32951326],
-					zoom: 16
-				}, {
-					searchControlProvider: 'yandex#search'
-				}),
-				myPlacemark = new ymaps.Placemark([59.93869332, 30.32309417], {}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/pin.svg',
-					iconImageSize: [80, 140],
-					iconImageOffset: [-37, -138]
-				});
-				myMap.geoObjects
-				.add(myPlacemark);
-			});
-		</script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
