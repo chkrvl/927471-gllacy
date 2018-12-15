@@ -1834,6 +1834,11 @@ img {
 	height: 430px;
 
 	margin: auto -27px;
+	
+	background-image: url(../img/pin.svg), url("../img/map.jpg");
+	background-size: 80px, cover;
+	background-position: 290px 140px, -20px;
+	background-repeat: no-repeat;
 }
 
 .contacts-wrapper {
