@@ -11,8 +11,14 @@ ymaps.ready(function () {
 		iconImageSize: [80, 140],
 		iconImageOffset: [-37, -138]
 	});
+
 	myMap.geoObjects
 	.add(myPlacemark);
+
+	myMap.controls.remove('typeSelector');
+	myMap.controls.remove('trafficControl');
+	myMap.controls.remove('searchControl');
+	myMap.controls.remove('zoomControl');
 });
 
 var link = document.querySelector(".contacts-wrapper .button");
