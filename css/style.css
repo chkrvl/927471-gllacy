@@ -1607,7 +1607,7 @@ img {
 	text-align: center;
 }
 
-.catalog-item:hover .button,
+.catalog-item:hover ~ .button,
 .catalog-item:focus-within ~ .button,
 .catalog-item .button:hover {
 	display: block;
