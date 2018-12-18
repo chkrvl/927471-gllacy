@@ -86,6 +86,21 @@ a {
 .modal {
 	position: fixed;
 	display: none;
+
+	z-index: 2;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 @-webkit-keyframes bounce {
@@ -167,6 +182,10 @@ a {
 .modal-error {
 	-webkit-animation: shake 0.6s;
 	        animation: shake 0.6s;
+}
+
+.overlay-show {
+	display: block;
 }
 
 .dropdown {
@@ -939,7 +958,7 @@ a {
   position: absolute;
   top: 446px;
   left: 0;
-  z-index: 20;
+  z-index: 1;
   
   font-size: 0;
 }

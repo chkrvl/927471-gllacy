@@ -21,8 +21,9 @@ ymaps.ready(function () {
 	myMap.controls.remove('zoomControl');
 });
 
-var link = document.querySelector(".contacts-wrapper .button");
+var button = document.querySelector(".contacts-wrapper .button");
 var popup = document.querySelector(".modal-feedback");
+var overlay = document.querySelector(".overlay");
 var close = popup.querySelector(".modal-close");
 var form = popup.querySelector(".feedback-form");
 var userName = form.querySelector("[name=feedback-name]");
@@ -37,9 +38,10 @@ try {
 	isStorageSupport = false;
 }
 
-link.addEventListener("click", function (evt) {
+button.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup.classList.add("modal-show");
+	overlay.classList.add("overlay-show");
 
 	if (storage) {
 		userName.value = localStorage.getItem("userName");
@@ -54,6 +56,7 @@ close.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup.classList.remove("modal-show");
 	popup.classList.remove("modal-error");
+	overlay.classList.remove("overlay-show");
 });
 
 form.addEventListener("submit", function (evt) {
@@ -70,17 +73,6 @@ form.addEventListener("submit", function (evt) {
 	}
 });
 
-popup.classList.contains("modal-show", function() {
-	window.addEventListener("keydown", function(evt) {
-		if (evt.keyCode === 27) {
-			evt.preventDefault();
-			popup.classList.remove("modal-show");
-			popup.classList.remove("modal-error");
-		}
-	}
-	)
-});
-
 // Поробовать сделать наоборот: сначала проверять открыт ли попап, после отслеживать нажатие Esc
 window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
@@ -88,6 +80,7 @@ window.addEventListener("keydown", function (evt) {
 		if (popup.classList.contains("modal-show")) {
 			popup.classList.remove("modal-show");
 			popup.classList.remove("modal-error");
+			overlay.classList.remove("overlay-show");
 		}
 	}
 });
