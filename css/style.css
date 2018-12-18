@@ -1626,7 +1626,8 @@ img {
 
 	font-weight: 400;
 	color: #323232;
-
+	
+	background-color: #e1d3a6;
 	background-image: url("../img/waffles-bg.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -1730,7 +1731,8 @@ img {
 
 .blog-preview {
 	height: 220px;
-
+	
+	background-color: #fff;
 	background-image: url("../img/blog-preview-bg.jpg");
 	background-size: cover;
 }
