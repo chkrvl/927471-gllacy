@@ -24,6 +24,7 @@ ymaps.ready(function () {
 var button = document.querySelector(".contacts-wrapper .button");
 var popup = document.querySelector(".modal-feedback");
 var overlay = document.querySelector(".overlay");
+var body = document.querySelector("body");
 var close = popup.querySelector(".modal-close");
 var form = popup.querySelector(".feedback-form");
 var userName = form.querySelector("[name=feedback-name]");
@@ -42,6 +43,7 @@ button.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup.classList.add("modal-show");
 	overlay.classList.add("overlay-show");
+	body.classList.add("motionless");
 
 	if (storage) {
 		userName.value = localStorage.getItem("userName");
@@ -57,6 +59,7 @@ close.addEventListener("click", function (evt) {
 	popup.classList.remove("modal-show");
 	popup.classList.remove("modal-error");
 	overlay.classList.remove("overlay-show");
+	body.classList.remove("motionless");
 });
 
 form.addEventListener("submit", function (evt) {
@@ -81,6 +84,7 @@ window.addEventListener("keydown", function (evt) {
 			popup.classList.remove("modal-show");
 			popup.classList.remove("modal-error");
 			overlay.classList.remove("overlay-show");
+			body.classList.remove("motionless");
 		}
 	}
 });
