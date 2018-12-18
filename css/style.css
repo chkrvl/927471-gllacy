@@ -528,7 +528,7 @@ img {
 
 /*Разобраться, как сделать перебор полей ввода в кабинете tabом после фокуса на кнопку Вход*/
 .nav-button:hover ~ .customer-login,
-.nav-button:focus-within ~ .customer-login,
+.nav-button:focus ~ .customer-login,
 .nav-button ~ .customer-login:hover {
 	display: block;
 }
