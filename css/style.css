@@ -1607,8 +1607,8 @@ img {
 	text-align: center;
 }
 
-.catalog-item:hover ~ .button,
-.catalog-item:focus ~ .button,
+.catalog-item:hover .button,
+.catalog-item:focus .button,
 .catalog-item .button:hover {
 	display: block;
 }
