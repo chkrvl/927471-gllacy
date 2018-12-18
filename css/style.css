@@ -483,7 +483,7 @@ img {
 }
 
 .nav-button:hover ~ .site-search,
-.nav-button:focus-within ~ .site-search,
+.nav-button:focus ~ .site-search,
 .nav-button ~ .site-search:hover {
 	display: block;
 }
@@ -1608,7 +1608,7 @@ img {
 }
 
 .catalog-item:hover ~ .button,
-.catalog-item:focus-within ~ .button,
+.catalog-item:focus ~ .button,
 .catalog-item .button:hover {
 	display: block;
 }
