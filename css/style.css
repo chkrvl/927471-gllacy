@@ -1397,11 +1397,11 @@ a {
 	content: "";
 
 	position: absolute;
-	left: -30px;
+	left: -33px;
 	top: -2px;
 
-	width: 26px;
-	height: 23px;
+	width: 25px;
+	height: 22px;
 
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
@@ -1415,6 +1415,7 @@ a {
 
 .filler-filter input[type="checkbox"]:checked + label::before {
 	background-image: url("../img/checkbox-on.svg");
+	background-size: contain;
 }
 
 .filler-filter input[type="checkbox"]:disabled + label::before {
@@ -1456,7 +1457,7 @@ a {
 	position: relative;
 
 	padding-top: 6px;
-	padding-bottom: 75px;
+	padding-bottom: 73px;
 	padding-right: 15px;
 	padding-left: 11px;
 	margin: 0;
@@ -1535,7 +1536,7 @@ a {
 
 .catalog-item-title {
 	display: inline-block;
-	width: 240px;
+	width: 250px;
 	padding: 0;
 	margin: 0;
 
@@ -1566,12 +1567,15 @@ a {
 	font-size: 45px;
 	font-weight: 700;
 	line-height: 45px;
+	word-spacing: -4px;
 	/*добавить правильный word-spacing или блок вместо пробела с нужной шириной*/
 }
 
 .catalog-item-price-measure {
 	font-size: 30px;
 	font-weight: 700;
+	letter-spacing: 2px;
+
 }
 
 .catalog-item .button {
@@ -1598,7 +1602,7 @@ a {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 1146px;
-	margin-top: -71px;
+	margin-top: -69px;
 	margin-bottom: 40px;
 	padding-top: 25px;
 	padding-right: 20px;
@@ -2002,7 +2006,7 @@ a {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin: 0;
-	margin-top: -33px;
+	margin-top: -27px;
 	margin-bottom: 30px;
 	padding: 0;
 
