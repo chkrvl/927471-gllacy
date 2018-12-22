@@ -387,7 +387,7 @@ a {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	width: 245px;
+	min-width: 245px;
 	margin-left: auto;
 	padding-bottom: 5px;
 }
@@ -460,12 +460,14 @@ a {
 }
 
 .wrapper input:hover {
-	border: 2px solid rgba(154, 154, 154, 0.52);
+	/*border: 2px solid rgba(154, 154, 154, 0.52);*/
+	box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .wrapper input:focus {
 	outline: none;
-	border: 2px solid rgba(46, 136, 228, 0.52);
+	/*border: 2px solid rgba(46, 136, 228, 0.52);*/
+	box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .search {
@@ -876,7 +878,7 @@ a {
 .marketing-campaign-slider {
 	text-align: center;
 	padding-top: 276px;
-	margin-bottom: 40px;
+	margin-bottom: 41px;
 }
 
 .slider-list {
@@ -894,7 +896,7 @@ a {
 	width: 700px;
 	margin: 0 auto;
 	margin-left: 228px;
-	margin-bottom: 26px;
+	margin-bottom: 30px;
 
 	font-size: 60px;
 	line-height: 60px;
@@ -904,8 +906,8 @@ a {
 
 .slide-button {
 	display: inline-block;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 9px;
+	padding-bottom: 10px;
 	padding-left: 41px;
 	padding-right: 40px;
 
@@ -1090,6 +1092,7 @@ a {
 
 .page-title {
 	margin-top: 5px;
+	margin-bottom: 25px;
 
 	font-size: 35px;
 	font-weight: 700;
@@ -1132,7 +1135,7 @@ a {
 
 .catalog-filter-list h3 {
 	margin: 0;
-	margin-left: 10px;
+	margin-left: 15px;
 	margin-right: 5px;
 	padding: 0;
 
@@ -1241,7 +1244,7 @@ a {
 	height: 20px;
 
 	margin-top: 6px;
-	margin-bottom: 18px;
+	margin-bottom: 15px;
 	padding-top: 17px;
 	padding-right: 22px;
 	padding-left: 22px;
@@ -1268,7 +1271,7 @@ a {
 
 .range-controls .toggle {
 	position: absolute;
-	top: 10px;
+	top: 8px;
 	left: 0;
 
 	width: 20px;
@@ -1314,9 +1317,9 @@ a {
 	min-width: 400px;
 	min-height: 27px;
 
-	padding-left: 14px;
+	padding-left: 16px;
 	padding-top: 11px;
-	margin-bottom: 18px;
+	margin-bottom: 15px;
 }
 
 .fat-filter label {
@@ -1397,14 +1400,15 @@ a {
 	content: "";
 
 	position: absolute;
-	left: -33px;
-	top: -2px;
+	left: -31px;
+	top: 0px;
 
-	width: 25px;
-	height: 22px;
+	width: 24px;
+	height: 20px;
 
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
+	background-size: contain;
 	opacity: 0.8;
 	cursor: pointer;
 }
@@ -1476,6 +1480,7 @@ a {
 
 	background-color: rgba(255, 255, 255, 0.2);
 	background-size: 400px 50px;
+	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .catalog-item a {
@@ -1603,7 +1608,7 @@ a {
 	box-sizing: border-box;
 	width: 1146px;
 	margin-top: -69px;
-	margin-bottom: 40px;
+	margin-bottom: 41px;
 	padding-top: 25px;
 	padding-right: 20px;
 
@@ -1636,10 +1641,10 @@ a {
 	flex-wrap: wrap;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
-	justify-content: space-between;
+	justify-content: space-around;
 
 	margin: 0;
-	padding-left: 76px;
+	padding: 0;
 }
 
 .features-item:first-of-type::before {
@@ -1647,7 +1652,7 @@ a {
 
 	position: absolute;
 	top: -12px;
-	left: -56px;
+	left: 11px;
 	width: 49px;
 	height: 49px;
 
@@ -1658,8 +1663,8 @@ a {
 	content: "";
 
 	position: absolute;
-	top: -13px;
-	left: -57px;
+	top: -12px;
+	left: 13px;
 	width: 49px;
 	height: 49px;
 
@@ -1671,7 +1676,7 @@ a {
 
 	position: absolute;
 	top: -13px;
-	left: -56px;
+	left: 11px;
 	width: 49px;
 	height: 49px;
 
@@ -1683,7 +1688,7 @@ a {
 
 	position: absolute;
 	top: -13px;
-	left: -57px;
+	left: 13px;
 	width: 49px;
 	height: 49px;
 
@@ -1693,6 +1698,7 @@ a {
 .features-item {
 	position: relative;
 	width: 476px;
+	padding-left: 69px;
 }
 
 .features-item p {
@@ -1880,7 +1886,7 @@ a {
 
 .contacts-wrapper .button {
 	margin-top: 26px;
-	padding: 9px 17px 10px 28px;
+	padding: 10px 17px 10px 28px;
 
 	line-height: 24px;
 }
@@ -1963,12 +1969,14 @@ a {
 }
 
 .feedback-form textarea:hover {
-	border: 2px solid rgba(154, 154, 154, 0.52);
+	/*border: 2px solid rgba(154, 154, 154, 0.52);*/
+	box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .feedback-form textarea:focus {
 	outline: none;
-	border: 2px solid rgba(46, 136, 228, 0.52);
+	/*border: 2px solid rgba(46, 136, 228, 0.52);*/
+	box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .feedback-form .button {
@@ -2242,11 +2250,11 @@ a {
 	content: "";
 
 	position: absolute;
-	top: -43px;
-	left: 2px;
-	width: 108px;
-	height: 39px;
+	top: -42px;
+	left: -5px;
+	width: 117px;
+	height: 36px;
 
 	background-image: url("../img/logo-htmlacademy-small.svg");
-	background-repeat: no-repeat;
+	background-repeat: round;
 }
