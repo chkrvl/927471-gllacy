@@ -296,7 +296,7 @@ a {
 	border: none;
 }
 
-/*Разобраться, как сделать выпадение подменю по фокусу на пункте меню */
+/*Разобраться, как сделать переборпунктов подменю после фокуса на пункте меню */
 .navigation-item:hover .site-navigation-submenu,
 .navigation-item a:focus ~ .site-navigation-submenu,
 .navigation-item ~ .site-navigation-submenu:hover {
@@ -1573,7 +1573,6 @@ a {
 	font-weight: 700;
 	line-height: 45px;
 	word-spacing: -4px;
-	/*добавить правильный word-spacing или блок вместо пробела с нужной шириной*/
 }
 
 .catalog-item-price-measure {
@@ -1892,7 +1891,7 @@ a {
 }
 
 .modal-feedback {
-	top: 35vh;
+	top: 20vh;
 	left: 35vw;
 
 	-webkit-box-sizing: border-box;
@@ -2012,10 +2011,10 @@ a {
 	flex-wrap: wrap;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
-	justify-content: space-between;
+	justify-content: flex-end;
 	margin: 0;
 	margin-top: -27px;
-	margin-bottom: 30px;
+	margin-bottom: 32px;
 	padding: 0;
 
 	position: relative;
@@ -2026,8 +2025,12 @@ a {
 	color: #323232;
 }
 
+.pagination-list li {
+	margin-left: 1px;
+}
+
 .pagination-list li:first-of-type {
-	margin-left: auto;
+	/*margin-left: auto;*/
 }
 
 .pagination-list a {
@@ -2042,9 +2045,21 @@ a {
 	text-align: center;
 }
 
-.prev-page,
-.next-page {
+.pagination-list .prev-page {
+	margin-right: 2px;
 
+	background-image: url("../img/icon-right-small.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotate(180deg);
+}
+
+.pagination-list .next-page {
+	margin-left: 2px;
+
+	background-image: url("../img/icon-right-small.svg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .disabled {
@@ -2061,13 +2076,14 @@ a {
 	border-radius: 50%;
 }
 
-.pagination-current {
+.pagination-current a {
 	display: inline-block;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	min-width: 27px;
 	height: 26px;
 	padding: 5px;
+	color: #323232;
 
 	vertical-align: middle;
 	text-align: center;
@@ -2089,7 +2105,7 @@ a {
 	content: "";
 
 	position: absolute;
-	bottom: -30px;
+	bottom: -32px;
 
 	width: 1146px;
 	height: 1px;
@@ -2107,7 +2123,7 @@ a {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	padding-top: 35px;
+	padding-top: 34px;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
@@ -2189,24 +2205,29 @@ a {
 	background-repeat: no-repeat;
 }
 
+.documentation {
+	margin: 0 auto;
+}
+
 .documentation-list {
-	margin-top: 0;
-	padding-left: 30px;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	height: 50px;
+	min-width: 300px;
+	flex-wrap: wrap;
+
+	padding: 0;
+	margin: 0 auto;
 
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 18px;
-	-webkit-column-count: 2;
-	column-count: 2;
 }
 
 .documentation-list li {
-	margin-bottom: 5px;
-}
-
-.documentation-list a:hover,
-.documentation-list a:active {
-	color: #ffbc9e;
+	display: inline-block;
+	margin-bottom: 3px;
 }
 
 .documentation-list li:first-of-type {
@@ -2225,6 +2246,11 @@ a {
 	height: 13px;
 
 	background-image: url("../img/heart.svg");
+}
+
+.documentation-list a:hover,
+.documentation-list a:active {
+	color: #ffbc9e;
 }
 
 .footer-copyright {
@@ -2250,7 +2276,7 @@ a {
 	content: "";
 
 	position: absolute;
-	top: -42px;
+	top: -41px;
 	left: -5px;
 	width: 117px;
 	height: 36px;
