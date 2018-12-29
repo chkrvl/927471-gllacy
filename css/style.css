@@ -432,11 +432,11 @@ a {
 	fill: #323232;
 }
 
-.nav-button:focus {
+/*.nav-button:focus {
 	outline: none;
 	-webkit-box-shadow: 0 0 0 3px #2f7cc0;
 	box-shadow: 0 0 0 3px #2f7cc0;
-}
+}*/
 
 .user-navigation .nav-button {
 	padding: 8px 16px 8.5px 44px;
@@ -523,6 +523,16 @@ a {
 	border-radius: 5px;
 }
 
+.site-search::before {
+	content: "";
+
+	position: absolute;
+	top: -8px;
+	right: 0;
+	width: 200px;
+	height: 15px;
+}
+
 .site-search label {
 	font-size: 0;
 }
@@ -576,6 +586,16 @@ a {
 	border-radius: 5px;
 }
 
+.customer-login::before {
+	content: "";
+
+	position: absolute;
+	top: -8px;
+	right: 0;
+	width: 95px;
+	height: 15px;
+}
+
 .login-form p {
 	padding: 0;
 	margin: 0;
@@ -621,13 +641,13 @@ a {
 	box-shadow: inset 0px 2px 2px 0 #942718;
 }
 
-.button:focus {
+/*.button:focus {
 	outline: none;
 	-webkit-box-shadow: 0 0 0 3px #fff,
 		0 0 0 6px #2f7cc0;
 	box-shadow: 0 0 0 3px #fff,
 		0 0 0 6px #2f7cc0;
-}
+}*/
 
 .login-form button {
 	float: left;
@@ -743,6 +763,16 @@ a {
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.order-list::before {
+	content: "";
+
+	position: absolute;
+	top: -8px;
+	right: 0;
+	width: 120px;
+	height: 15px;
 }
 
 .order-list-form table {
@@ -1185,11 +1215,11 @@ a {
 	background-color: #ededed;
 }
 
-.catalog-filter-form button[type="submit"]:focus {
+/*.catalog-filter-form button[type="submit"]:focus {
 	outline: none;
 	-webkit-box-shadow: 0 0 0 3px #2f7cc0;
 	box-shadow: 0 0 0 3px #2f7cc0;
-}
+}*/
 
 .sort-type-filter .filter-item {
 	-webkit-appearance: none;
