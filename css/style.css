@@ -432,12 +432,6 @@ a {
 	fill: #323232;
 }
 
-/*.nav-button:focus {
-	outline: none;
-	-webkit-box-shadow: 0 0 0 3px #2f7cc0;
-	box-shadow: 0 0 0 3px #2f7cc0;
-}*/
-
 .user-navigation .nav-button {
 	padding: 8px 16px 8.5px 44px;
 	margin-right: 10px;
@@ -470,13 +464,11 @@ a {
 }
 
 .wrapper input:hover {
-	/*border: 2px solid rgba(154, 154, 154, 0.52);*/
 	box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .wrapper input:focus {
 	outline: none;
-	/*border: 2px solid rgba(46, 136, 228, 0.52);*/
 	box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
@@ -640,14 +632,6 @@ a {
 	-webkit-box-shadow: inset 0px 2px 2px 0 #942718;
 	box-shadow: inset 0px 2px 2px 0 #942718;
 }
-
-/*.button:focus {
-	outline: none;
-	-webkit-box-shadow: 0 0 0 3px #fff,
-		0 0 0 6px #2f7cc0;
-	box-shadow: 0 0 0 3px #fff,
-		0 0 0 6px #2f7cc0;
-}*/
 
 .login-form button {
 	float: left;
@@ -1214,12 +1198,6 @@ a {
 	box-shadow: inset 0px 2px 1px 0 #696969;
 	background-color: #ededed;
 }
-
-/*.catalog-filter-form button[type="submit"]:focus {
-	outline: none;
-	-webkit-box-shadow: 0 0 0 3px #2f7cc0;
-	box-shadow: 0 0 0 3px #2f7cc0;
-}*/
 
 .sort-type-filter .filter-item {
 	-webkit-appearance: none;
@@ -2068,10 +2046,6 @@ a {
 
 .pagination-list li {
 	margin-left: 1px;
-}
-
-.pagination-list li:first-of-type {
-	/*margin-left: auto;*/
 }
 
 .pagination-list a {
